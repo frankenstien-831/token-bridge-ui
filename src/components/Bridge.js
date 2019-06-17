@@ -327,48 +327,33 @@ export class Bridge extends React.Component {
     const foreignNetworkSubtitle = this.getNetworkSubTitle(foreignStore.networkName)
 
     return(
-      <div className="bridge-container">
         <div className="bridge">
-          <BridgeAddress
-            isHome={true}
-            reverse={reverse}
-          />
           <div className="bridge-transfer">
-            <div className="left-image-wrapper">
-              <div className="left-image" />
-            </div>
-            <div className="bridge-transfer-content">
-              <div className="bridge-transfer-content-background">
-                <BridgeNetwork
-                  balance={reverse ? foreignStore.balance : homeStore.getDisplayedBalance()}
-                  currency={reverse ? foreignStore.symbol : homeStore.symbol}
-                  isHome={true}
-                  networkSubtitle={reverse ? foreignNetworkSubtitle : homeNetworkSubtitle}
-                  networkTitle={reverse ? foreignNetworkName : homeNetworkName}
-                  showModal={reverse ? this.loadForeignDetails : this.loadHomeDetails}
-                  side="left"
-                />
-                <BridgeForm
-                  currency={formCurrency}
-                  displayArrow={!web3Store.metamaskNotSetted}
-                  onInputChange={this.handleInputChange('amount')}
-                  onTransfer={this.onTransfer}
-                  reverse={reverse}
-                />
-                <BridgeNetwork
-                  balance={reverse ? homeStore.getDisplayedBalance() : foreignStore.balance}
-                  currency={reverse ? homeStore.symbol : foreignStore.symbol}
-                  isHome={false}
-                  networkSubtitle={reverse ? homeNetworkSubtitle : foreignNetworkSubtitle}
-                  networkTitle={reverse ? homeNetworkName : foreignNetworkName}
-                  showModal={reverse ? this.loadHomeDetails : this.loadForeignDetails}
-                  side="right"
-                />
-              </div>
-            </div>
-            <div className="right-image-wrapper">
-              <div className="right-image" />
-            </div>
+            <BridgeNetwork
+                balance={reverse ? foreignStore.balance : homeStore.getDisplayedBalance()}
+                currency={reverse ? foreignStore.symbol : homeStore.symbol}
+                isHome={true}
+                networkSubtitle={reverse ? foreignNetworkSubtitle : homeNetworkSubtitle}
+                networkTitle={reverse ? foreignNetworkName : homeNetworkName}
+                showModal={reverse ? this.loadForeignDetails : this.loadHomeDetails}
+                side="left"
+            />
+            <BridgeForm
+                currency={formCurrency}
+                displayArrow={!web3Store.metamaskNotSetted}
+                onInputChange={this.handleInputChange('amount')}
+                onTransfer={this.onTransfer}
+                reverse={reverse}
+            />
+            <BridgeNetwork
+                balance={reverse ? homeStore.getDisplayedBalance() : foreignStore.balance}
+                currency={reverse ? homeStore.symbol : foreignStore.symbol}
+                isHome={false}
+                networkSubtitle={reverse ? homeNetworkSubtitle : foreignNetworkSubtitle}
+                networkTitle={reverse ? homeNetworkName : foreignNetworkName}
+                showModal={reverse ? this.loadHomeDetails : this.loadForeignDetails}
+                side="right"
+            />
           </div>
           <BridgeAddress
             isHome={false}
@@ -388,7 +373,6 @@ export class Bridge extends React.Component {
               onCancel={() => {this.setState({showConfirmation: false, confirmationData: {}})}}
               {...confirmationData} />
           </ModalContainer>
-        </div>
       </div>
     )
   }
