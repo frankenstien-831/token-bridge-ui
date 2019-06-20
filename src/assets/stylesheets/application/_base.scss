@@ -93,11 +93,11 @@ button {
   margin-right: auto;
   position: relative;
   width: 100%;
-  max-width: 960px;
-  padding: 0 $spacer / 2;
+  max-width: $container-width;
+  padding: $spacer / 2;
 
   @media screen and (min-width: $break-point--small) {
-    padding: 0;
+    padding: $spacer * 2 0;
   }
 }
 

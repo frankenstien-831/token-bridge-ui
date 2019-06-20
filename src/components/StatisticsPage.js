@@ -21,10 +21,10 @@ export class StatisticsPage extends React.Component {
 
     return withoutEvents ? ( <Redirect to="/" />) : (
       <div className="statistics-page">
-        <div className='statistics-left-container' />
+        {/* <div className='statistics-left-container' /> */}
         <div className='statistics-page-container'>
           <div className='statistics-bridge-container'>
-            <span className='statistics-bridge-title statistics-title'>Bridge Statistics</span>
+            <h3 className='statistics-bridge-title statistics-title'>Bridge Statistics</h3>
             <BridgeStatistics
               users={homeStore.statistics.finished ? homeStore.statistics.users.size : ''}
               totalBridged={homeStore.statistics.finished ? homeStore.statistics.totalBridged.toString() : ''}
@@ -45,14 +45,14 @@ export class StatisticsPage extends React.Component {
           }
           <div className='statistics-transaction-container'>
             <div className='statistics-deposit-container'>
-              <span className='statistics-deposit-title statistics-title'>Tokens {leftTitle}</span>
+              <h3 className='statistics-deposit-title statistics-title'>Tokens {leftTitle}</h3>
               <TransactionsStatistics
                 txNumber={homeStore.statistics.finished ? homeStore.statistics.deposits : ''}
                 type={foreignStore.symbol}
                 value={homeStore.statistics.finished ? homeStore.statistics.depositsValue : ''} />
             </div>
             <div className='statistics-withdraw-container'>
-              <span className='statistics-withdraw-title statistics-title'>Tokens {rightTitle}</span>
+              <h3 className='statistics-withdraw-title statistics-title'>Tokens {rightTitle}</h3>
               <TransactionsStatistics
                 txNumber={homeStore.statistics.finished ? homeStore.statistics.withdraws : ''}
                 type={foreignStore.symbol}
@@ -60,9 +60,9 @@ export class StatisticsPage extends React.Component {
             </div>
           </div>
         </div>
-        <div className='pattern-background'>
+        {/* <div className='pattern-background'>
           <div className="pattern-background-image" />
-        </div>
+        </div> */}
       </div>
     )
   }

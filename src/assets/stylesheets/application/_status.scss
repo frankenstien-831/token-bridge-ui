@@ -1,35 +1,12 @@
 .status-page {
-  display: flex;
-  justify-content: center;
-
   .status-page-container {
-    display: flex;
-    flex-direction: column;
-    max-width: $container-width;
-    width: 70%;
-    padding-bottom: 25px;
-
-    @media screen and (max-width: $tablet-width-landscape) {
-      width: 100%;
-    }
-
-    @media screen and (max-width: $tablet-width) {
-      padding-left: 15px;
-      padding-right: 15px;
-    }
+    padding-bottom: $spacer;
 
     .status-title {
       color: $status-text-color;
-      font-size: 24px;
-      line-height: 3;
-      text-align: left;
     }
 
     .status-configuration-container {
-      display: flex;
-      flex-direction: column;
-      padding-top: 30px;
-
       .status-configuration-data {
         display: flex;
         justify-content: space-evenly;

@@ -1,7 +1,8 @@
 .menu-items {
-    font-weight: bold;
-    line-height: 16px;
-    margin: 0 15px;
+    font-weight: $font-weight-bold;
+    text-transform: uppercase;
+    font-size: $font-size-small;
+    margin: 0 $spacer;
     text-decoration: none;
 
     @media screen and (max-width: $mobile-width) {
@@ -19,8 +20,10 @@
 }
 
 .menu-items-icon {
-    float: left;
+    display: inline-block;
+    margin-bottom: -.2rem;
+
     path {
-        fill: $header-menu-icon-color;
+        fill: $brand-grey-light;
     }
 }

@@ -23,10 +23,10 @@ export class StatusPage extends React.Component {
 
     return (
       <div className="status-page">
-        <div className='status-left-container' />
+        {/* <div className='status-left-container' /> */}
         <div className='status-page-container'>
           <div className='status-configuration-container'>
-            <span className='status-configuration-title status-title'>Configuration</span>
+            <h3 className='status-configuration-title status-title'>Configuration</h3>
               <Configuration
                 requiredSignatures={requiredSignatures}
                 authorities={authorities}
@@ -36,7 +36,7 @@ export class StatusPage extends React.Component {
           </div>
           {withoutEvents ? null :
             <div className='status-authorities-container'>
-              <span className='status-authorities-title status-title'>Authorities</span>
+              <h3 className='status-authorities-title status-title'>Authorities</h3>
               <div className='status-authorities-data'>
                 {validatorsList.map((validator,i) => (
                   <Authority key={validator} address={validator} number={(i+1)} logoIndex={(i) % 3} />
@@ -45,9 +45,9 @@ export class StatusPage extends React.Component {
             </div>
           }
         </div>
-        <div className='pattern-background'>
+        {/* <div className='pattern-background'>
           <div className="pattern-background-image" />
-        </div>
+        </div> */}
       </div>
     )
   }

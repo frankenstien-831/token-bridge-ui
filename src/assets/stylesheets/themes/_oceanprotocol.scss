@@ -25,21 +25,21 @@ $main-font-family: 'Sharp Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 
 
 // header
 $header-background-color: $primary-color;
-$header-logo-width: 180px;
-$header-logo-height: 26px;
+$header-logo-width: 60px;
+$header-logo-height: 60px;
 
 // header menu
 $header-menu-icon-color: $secondary-color;
 $header-menu-text-color: #fff;
 
 // daily quota
-$daily-quota-background: $primary-color-darker;
-$daily-quota-progress: $secondary-color;
+$daily-quota-background: $brand-grey;
+$daily-quota-progress: $yellow;
 
 // footer
 $footer-background-color: $primary-color;
-$footer-logo-width: 130px;
-$footer-logo-height: 18px;
+$footer-logo-width: 40px;
+$footer-logo-height: 40px;
 $footer-text-color: #fff;
 
 // separator
@@ -58,8 +58,8 @@ $logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo.svg';
 // home logo
 $home-logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo-home.png';
 $home-logo-image-modal: $base-images-path + '/themes/' + $theme-name + '/logos/logo-home-modal.png';
-$home-logo-width: 52px;
-$home-logo-height: 16px;
+$home-logo-width: 60px;
+$home-logo-height: 60px;
 
 // foreign logo
 $foreign-logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo-foreign.svg';
@@ -126,7 +126,7 @@ $bridge-transfer-title-color: $primary-color;
 $alert-logo-box-background-color: $primary-color;
 
 // copy icon
-$copy-icon-color: $primary-color;
+$copy-icon-color: $brand-grey-light;
 
 // status section
 $status-text-color: $text-color;

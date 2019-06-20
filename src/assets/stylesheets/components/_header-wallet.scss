@@ -1,5 +1,5 @@
 .header-wallet {
-    background-color: $primary-color-dark;
+    border-left: 1px solid $primary-color-dark;
     display: flex;
     flex-direction: column;
     height: 70px;
@@ -17,14 +17,14 @@
         .wallet-icon {
             margin-right: 10px;
              path {
-                fill: $header-menu-icon-color;
+                fill: $brand-grey-light;
             }
         }
         .wallet-text {
             color: #fff;
-            font-size: 14px;
+            font-size: $font-size-small;
             font-weight: bold;
-            line-height: 18px;
+            
             &:hover {
                 text-decoration: none;
             }

@@ -23,14 +23,11 @@ export class NoWallet extends Component {
     return (
       <ModalContainer showModal={showModal && this.state.showModal}>
         <div className="noWallet-alert">
-          <div className="noWallet-image-container">
-            <img className="noWallet-icon" src={noWalletIcon} alt="no wallet icon"/>
-          </div>
           <div className="noWallet-alert-container">
-            <h2 className="noWallet-title">Wallet not found</h2>
-            <p className="noWallet-description">A wallet is not installed. Before continue, please install one (AlphaWallet, Metamask
+            <h2 className="title">Wallet not found</h2>
+            <p className="description">A wallet is not installed. Before continue, please install one (AlphaWallet, Metamask
               or Nifty Wallet) and return to this page to continue using the application.</p>
-            <p className="noWallet-description">For further information on how to install any of both wallets, please
+            <p className="description">For further information on how to install any of both wallets, please
               click the buttons below.</p>
             <div className="noWallet-buttons">
               <a
