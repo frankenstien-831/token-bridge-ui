@@ -29,10 +29,10 @@ export const BridgeNetwork = ({
 
   return (
     <div className={`network-container-${containerName}`}>
-      <p className={`${ side ? `text-${side}` : ''}`}>
-        <span className="network-title">{networkTitle}</span>
+      <div>
+        <h2 className="network-title">{networkTitle}</h2>
         {networkSubtitle ? <span className="network-name">{networkSubtitle}</span> : null}
-      </p>
+      </div>
       <p>
         <span className="network-basic-label">Balance:</span>
         <span className="network-balance"> {formattedBalance} {currency}</span>
