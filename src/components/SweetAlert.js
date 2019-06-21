@@ -5,7 +5,7 @@ import { inject, observer } from "mobx-react";
 @inject("RootStore")
 @observer
 export class SweetAlert extends React.Component {
-  componentWillReact(){
+  componentWillUpdate(){
     const { alertStore } = this.props.RootStore
     if(alertStore.alerts.length > 0){
       const alert = alertStore.alerts.slice()[0]

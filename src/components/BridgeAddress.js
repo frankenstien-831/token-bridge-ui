@@ -8,20 +8,10 @@ export const BridgeAddress = ({ isHome, reverse }) => {
 
   return isHome ?
     (<div className="bridge-home">
-      <div className="bridge-home-container">
-        <div className="home-logo-container">
-          <div className={reverse ? 'foreign-logo' : 'home-logo'} />
-        </div>
-      </div>
       {getAddress()}
     </div>)
     :
     (<div className="bridge-foreign">
       {getAddress()}
-      <div className="bridge-foreign-container">
-        <div className="foreign-logo-container">
-          <div className={reverse ? 'home-logo' : 'foreign-logo'} />
-        </div>
-      </div>
     </div>)
 }

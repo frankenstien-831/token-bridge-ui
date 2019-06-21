@@ -18,9 +18,9 @@ export class Wallet extends React.Component {
           href={explorerAddressUrl}
           target="_blank"
           className="wallet-text wallet-link">
-        {web3Store.defaultAccount.address.slice(0,17).concat('...')}
+        {web3Store.defaultAccount.address.slice(0,15).concat('...')}
       </a>)
-      :  (<span className="wallet-text">Login with <span className="wallet-text-metamask">wallet</span></span>)
+      :  (<span className="wallet-text">Login with wallet</span>)
 
     return (
       <div className="header-wallet"
@@ -29,7 +29,7 @@ export class Wallet extends React.Component {
       >
         <div className="wallet-container">
           <span className="wallet-icon">{<WalletIcon />}</span>
-          {wallet}
+          <code>{wallet}</code>
         </div>
         <div className="daily-quota-container">
           {web3Store.metamaskNet.id && <div className="daily-quota-progress" style={{width}} />}

@@ -1,60 +1,60 @@
-html,
-body,
-p, h1, h2, h3 {
-  font-weight: normal;
-  margin: 0;
-  padding: 0;
-}
+@import '../themes/oceanprotocol/variables';
 
-html {
-  display: flex;
-  min-height: 100%;
-}
+// html,
+// body {
+//   margin: 0;
+//   padding: 0;
+// }
 
-body {
-  background-color: $main-background-color;
-  box-sizing: border-box;
-  font-family: $main-font-family;
-  padding-bottom: $footer-height_desktop;
-  position: relative;
-  width: 100%;
+// html {
+//   display: flex;
+//   min-height: 100%;
+// }
 
-  @media screen and (max-width: $tablet-width) {
-    padding-bottom: $footer-height_mobile;
-  }
-}
+// body {
+//   background-color: $main-background-color;
+//   box-sizing: border-box;
+//   font-family: $main-font-family;
+//   padding-bottom: $footer-height_desktop;
+//   position: relative;
+//   width: 100%;
 
-a {
-  color: $link-color;
-  text-decoration: none;
+//   @media screen and (max-width: $tablet-width) {
+//     padding-bottom: $footer-height_mobile;
+//   }
+// }
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// a {
+//   color: $link-color;
+//   text-decoration: none;
 
-button {
-  color: #08b3f2;
-  cursor: pointer;
-  margin-left: 5px;
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
-  &:hover {
-    text-decoration: underline;
-  }
-}
+// button {
+//   color: $link-color;
+//   cursor: pointer;
+//   margin-left: 5px;
+
+//   &:hover {
+//     text-decoration: underline;
+//   }
+// }
 
 input,
 button {
   border: 0;
-  font-size: 14px;
-  margin: 0;
   outline: none;
-  padding: 0;
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  font-size: $font-size-base;
 }
 
-strong {
-  font-weight: 700;
-}
+// strong {
+//   font-weight: $font-weight-bold;
+// }
 
 .hidden {
   overflow: hidden;
@@ -65,14 +65,13 @@ strong {
 }
 
 .label {
-  font-weight: 700;
+  font-weight: $font-weight-bold;
   margin-bottom: 7px;
   margin-top: 15px;
 }
 
 .description {
   color: #8197a2;
-  line-height: 24px;
 }
 
 .break-all {
@@ -94,6 +93,12 @@ strong {
   margin-right: auto;
   position: relative;
   width: 100%;
+  max-width: $container-width;
+  padding: $spacer $spacer / 2;
+
+  @media screen and (min-width: $break-point--small) {
+    padding: $spacer * 2 0;
+  }
 }
 
 .only-mobile {

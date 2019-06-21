@@ -10,6 +10,8 @@ let filename;
 
 if (process.env.APP_STYLES === 'classic') {
     filename = 'application.classic.css'
+} else if (process.env.APP_STYLES === 'oceanprotocol') {
+    filename = 'application.oceanprotocol.css'
 } else {
     filename = 'application.core.css'
 }

@@ -5,7 +5,7 @@ import { HeaderMenu } from './HeaderMenu'
 import { Link } from  'react-router-dom'
 import { MobileMenu } from './MobileMenu'
 import { MobileMenuButton } from './MobileMenuButton'
-import { inject, observer } from 'mobx-react/index'
+import { inject, observer } from 'mobx-react'
 
 @inject("RootStore")
 @observer

@@ -47,7 +47,7 @@ export const NetworkDetails = ({
           <span className="details-label">{networkTitle} Address</span>
             <span className="details-description details-copy">
               <a className="details-description" href={getExplorerAddressUrl(address)} target="_blank" >
-                {address.slice(0,27).concat('...')}
+                <code>{address.slice(0,20).concat('...')}</code>
               </a>
               <CopyToClipboard text={address}>
                 <span className="copy-icon copy-icon-right"><CopyIcon /></span>
