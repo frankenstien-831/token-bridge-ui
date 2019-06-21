@@ -1,7 +1,8 @@
 import BN from 'bignumber.js'
 import { fromDecimals } from './decimals'
 import { fromWei } from 'web3-utils'
-import { abi as rewardableValidatorsAbi } from '../../contracts/RewardableValidators'
+// import { abi as rewardableValidatorsAbi } from '../../contracts/RewardableValidators'
+import { abi as BRIDGE_VALIDATORS_ABI } from '../../contracts/BridgeValidators'
 import { ERC_TYPES } from "./bridgeMode"
 
 export const ZERO_ADDRESS = '0x0000000000000000000000000000000000000000'
@@ -63,7 +64,8 @@ export const totalBurntCoins = async (contract) => {
 }
 
 export const getValidatorList = async (address, eth) => {
-  const validatorsContract = new eth.Contract(rewardableValidatorsAbi, address)
+  //const validatorsContract = new eth.Contract(rewardableValidatorsAbi, address)
+  const validatorsContract = new eth.Contract(BRIDGE_VALIDATORS_ABI, address)
   const validators = await validatorList(validatorsContract)
 
   if(validators.length) {
