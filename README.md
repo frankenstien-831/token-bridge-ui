@@ -8,6 +8,8 @@
 
 _Originally forked from [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poanetwork/bridge-ui/releases/tag/2.1.1) ([`0342e0a`](https://github.com/oceanprotocol/token-bridge-ui/commit/0342e0ae89afd51860064f8c882c55c62777582c)), which is running against [`poanetwork/poa-bridge-contracts:v2.3.1`](https://github.com/poanetwork/poa-bridge-contracts/releases/tag/2.3.1)._
 
+Uses contracts from [oceanprotocol/token-bridge-contracts](https://github.com/oceanprotocol/token-bridge-contracts) [`v2.2.0`](https://github.com/oceanprotocol/token-bridge-contracts/releases/tag/2.2.0).
+
 - [Development](#Development)
   - [Activate Theme](#Activate-Theme)
 - [Testing](#Testing)
@@ -18,6 +20,8 @@ _Originally forked from [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poane
 - [License](#License)
 
 ## Development
+
+- requires Node.js `v9` (because of )
 
 To start development you need to:
 
