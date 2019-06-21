@@ -20,7 +20,7 @@ export class Wallet extends React.Component {
           className="wallet-text wallet-link">
         {web3Store.defaultAccount.address.slice(0,15).concat('...')}
       </a>)
-      :  (<span className="wallet-text">Login with <span className="wallet-text-metamask">wallet</span></span>)
+      :  (<span className="wallet-text">Login with wallet</span>)
 
     return (
       <div className="header-wallet"

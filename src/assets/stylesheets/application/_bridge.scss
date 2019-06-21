@@ -12,7 +12,7 @@
 
 .pageTitle {
     margin: 0;
-    font-size: $font-size-h2;
+    font-size: $font-size-h1;
 }
 
 .pageDescription {
@@ -46,23 +46,42 @@
     }
 }
 
+$bridge-background-image: $base-images-path + '/themes/' + $theme-name + '/bridge/arrow-back.svg';
+$bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + '/bridge/arrow-back-mobile.svg';
+
 .bridge-transfer {
     width: 100%;
     border-radius: .2rem;
     border: 1px solid $brand-grey-lighter;
-    background: #fff;
+    background: $brand-white url($bridge-background-image-mobile) no-repeat center center;
+    background-size: contain;
     padding: $spacer * 2 $spacer;
     
     @media (min-width: $break-point--small) {
+        padding: $spacer * 3 $spacer $spacer * 2 $spacer;
         display: grid;
         grid-template-columns: 1fr 2fr 1fr;
         grid-gap: $spacer;
+        background-image: url($bridge-background-image);
+        background-position: 40% center;
+        background-size: unset;
     }
 
     .bridge-network-data {
         align-items: center;
         cursor: pointer;
         display: flex;
+    }
+
+    .form-container {
+        margin-top: $spacer;
+        margin-bottom: $spacer;
+
+        @media (min-width: $break-point--small) {
+            margin-right: $spacer;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
     }
 
     .network-basic-label {
@@ -77,7 +96,8 @@
 
     .network-name {
         color: $brand-grey-light;
-        font-weight: $font-weight-bold;
+        font-size: $font-size-large;
+        margin-left: $spacer / 4;
     }
 
     .network-id {
@@ -96,7 +116,6 @@
     .network-balance {
         color: $bridge-balance-color;
         font-weight: $font-weight-bold;
-        font-size: $font-size-small;
         white-space: nowrap;
     }
 
@@ -139,9 +158,10 @@
         box-shadow: none;
         font-size: $font-size-large;
         height: 48px;
-        padding-left: 16px;
-        padding-right: 90px;
+        padding-left: $spacer / 4;
+        padding-right: 80px;
         width: 100%;
+        text-align: center;
 
         &::placeholder {
             color: $brand-grey-light;
@@ -200,26 +220,36 @@
         height: 80px;
         justify-content: center;
         width: 85px;
-        border: 1px solid $brand-grey-lighter;
+        background: $brand-black;
         border-radius: .2rem;
         margin-bottom: $spacer / 2;
     }
 
     .details-body {
         min-height: 254px;
+        margin-top: $spacer;
+    }
 
-        .details-data-container {
-            display: flex;
-            justify-content: space-between;
+    .details-data-container {
+        display: flex;
+        justify-content: space-between;
+        margin: 0;
+        border-bottom: 1px solid $brand-grey-lighter;
+        padding-top: $spacer / 4;
+        padding-bottom: $spacer / 4;
 
-            @media screen and (max-width: $break-point--small) {
-                flex-direction: column;
-            }
-
-            .details-copy {
-                cursor: pointer;
-            }
+        &:first-child {
+            border-top: 1px solid $brand-grey-lighter;
         }
+
+        @media screen and (max-width: $break-point--small) {
+            flex-direction: column;
+        }
+    }
+
+    .details-copy {
+        cursor: pointer;
+        margin-top: .2rem;
     }
 
     .details-label {
@@ -337,69 +367,75 @@
 }
 
 .transfer-alert {
-    
-    .alert-container {
+    .transfer-title {
+        align-items: center;
+        color: $bridge-transfer-title-color;
+        display: flex;
+        font-size: $font-size-base;
+        justify-content: space-between;
+        padding-bottom: $spacer * 2;
 
-        .transfer-title {
+        path {
+            fill: $primary-color;
+        }
+
+        .alert-logo-box {
             align-items: center;
-            color: $bridge-transfer-title-color;
+            background-color: $alert-logo-box-background-color;
+            border-radius: .2rem;
             display: flex;
-            font-size: $font-size-small;
-            justify-content: space-between;
+            width: 85px;
+            height: 80px;
+            justify-content: center;
+            margin-left: $spacer / 2;
+            margin-right: $spacer / 2;
+            position: relative;
+        }
+    }
 
-            path {
-                fill: $primary-color;
-            }
+    .transfer-network {
+        position: absolute;
+        top: 110%;
+        left: 0;
+        width: 160%;
+        font-size: $font-size-small;
+        color: $brand-grey-light;
+        font-weight: $font-weight-bold;
+    }
 
-            .alert-logo-box {
-                align-items: center;
-                background-color: $alert-logo-box-background-color;
-                border-radius: .2rem;
-                display: flex;
-                height: 60px;
-                justify-content: center;
-                width: 60px;
-                margin-left: $spacer / 2;
-                margin-right: $spacer / 2;
-            }
+    .transfer-description {
+        color: $modal-text-color;
+    }
+
+    .transfer-buttons {
+        display: flex;
+        justify-content: space-between;
+        padding: $spacer / 2 0 0;
+
+        .transfer-confirm {
+            background: $brand-gradient;
+            border-radius: .2rem;
+            color: $button-text-color;
+            text-transform: uppercase;
+            flex-grow: 1;
+            height: 40px;
+            max-width: 49%;
+            text-decoration: none;
         }
 
-        .transfer-description {
-            color: $modal-text-color;
-        }
+        .transfer-cancel {
+            background-color: $button-bordered-background-color;
+            border-radius: .2rem;
+            border: 1px solid $button-bordered-border-color;
+            color: $button-bordered-text-color;
+            text-transform: uppercase;
+            flex-grow: 1;
+            height: 40px;
+            max-width: 49%;
+            text-decoration: none;
 
-        .transfer-buttons {
-            display: flex;
-            justify-content: space-between;
-            padding: 20px 0 0;
-
-            .transfer-confirm {
-                background-color: $button-background-color;
-                border-radius: .2rem;
-                color: $button-text-color;
-                flex-grow: 1;
-                height: 40px;
-                max-width: 49%;
-                text-decoration: none;
-
-                &:hover {
-                    background-color: darken($button-background-color, 10%);
-                }
-            }
-
-            .transfer-cancel {
-                background-color: $button-bordered-background-color;
-                border-radius: .2rem;
-                border: solid 1px $button-bordered-border-color;
-                color: $button-bordered-text-color;
-                flex-grow: 1;
-                height: 40px;
-                max-width: 49%;
-                text-decoration: none;
-
-                &:hover {
-                    opacity: 0.7;
-                }
+            &:hover {
+                opacity: 0.7;
             }
         }
     }

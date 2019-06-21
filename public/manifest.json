@@ -1,15 +1,30 @@
 {
-  "short_name": "POA Bridge UI",
-  "name": "POA Bridge UI",
+  "short_name": "Ocean Token Bridge",
+  "name": "Ocean Token Bridge",
   "icons": [
     {
       "src": "favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
+    },
+    {
+        "src": "/favicons/favicon_128.png",
+        "sizes": "128x128",
+        "type": "image/png"
+    },
+    {
+        "src": "/favicons/favicon_256.png",
+        "sizes": "256x256",
+        "type": "image/png"
+    },
+    {
+        "src": "/favicons/favicon_512.png",
+        "sizes": "512x512",
+        "type": "image/png"
     }
   ],
   "start_url": "./index.html",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#141414",
   "background_color": "#ffffff"
 }

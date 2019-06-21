@@ -16,6 +16,7 @@
     position: relative;
 
     .title {
+      color: $modal-title-color;
       margin-top: 0;
       margin-bottom: $spacer;
       font-size: $font-size-h2;
@@ -23,16 +24,16 @@
     }
 
     .description {
-      color: $brand-grey;
+      color: $modal-text-color;
       font-size: $font-size-small;
       margin-bottom: $spacer;
     }
 
     .close-button {
-      padding: 15px;
+      padding: $spacer / 2;
       position: absolute;
-      right: -40px;
-      top: -10px;
+      right: 0;
+      top: 0;
       z-index: 400;
 
       i {

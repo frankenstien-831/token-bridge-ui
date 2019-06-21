@@ -1,12 +1,14 @@
 .header-menu {
     align-items: center;
-    display: flex;
     justify-content: space-between;
     max-width: 700px;
-    @media screen and (max-width: $mobile-width) {
-        display: none;
+    display: none;
+
+    @media screen and (min-width: $break-point--medium) {
+        display: flex;
     }
-    @media screen and (max-width: $tablet-width) {
+
+    @media screen and (min-width: $break-point--large) {
         justify-content: flex-end;
         width: auto;
     }

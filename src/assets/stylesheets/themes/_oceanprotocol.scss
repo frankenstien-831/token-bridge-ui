@@ -1,4 +1,3 @@
-@import './oceanprotocol/variables';
 @import './oceanprotocol/global.scss';
 
 $theme-name: 'oceanprotocol';
@@ -13,7 +12,7 @@ $tertiary-color: $yellow;
 $danger-color: $red;
 $blue-color: $brand-blue;
 
-$text-color: $primary-color-dark;
+$text-color: $brand-grey;
 $link-color: $secondary-color;
 
 $gradient-color-1: $secondary-color;
@@ -64,8 +63,8 @@ $home-logo-height: 60px;
 // foreign logo
 $foreign-logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo-foreign.svg';
 $foreign-logo-image-modal: $base-images-path + '/themes/' + $theme-name + '/logos/logo-foreign-modal.svg';
-$foreign-logo-width: 54px;
-$foreign-logo-height: 11px;
+$foreign-logo-width: 60px;
+$foreign-logo-height: 60px;
 
 // buttons
 $button-background-color: $secondary-color;
@@ -85,9 +84,9 @@ $button-bordered-text-color: $primary-color;
 $button-bordered-border-color: $primary-color;
 
 // modals
-$modal-background-color: #fff;
-$modal-overlay-background-color: rgba($primary-color-dark, 0.8);
-$modal-title-color: $primary-color;
+$modal-background-color: $brand-white;
+$modal-overlay-background-color: rgba($brand-black, 0.8);
+$modal-title-color: $brand-black;
 $modal-text-color: $text-color;
 $modal-link-color: $primary-color;
 
@@ -97,7 +96,7 @@ $mobile-menu-overlay-color: rgba($primary-color-darker, 0.9);
 
 // loading
 $loading-item-background-color: $secondary-color;
-$loading-item-text-color: #fff;
+$loading-item-text-color: $brand-white;
 $loading-logo: $base-images-path + '/themes/' + $theme-name + '/logos/logo-loading.svg';
 
 // bridge section
@@ -115,11 +114,6 @@ $bridge-textfield-color: $text-color;
 $bridge-textfield-placeholder-color: $brand-grey-light;
 $bridge-side-image-width: 272px;
 $bridge-side-image-height: 276px;
-$bridge-image-center-pointing-left: $base-images-path + '/themes/' + $theme-name + '/bridge/center-image-pointing-left.svg';
-$bridge-image-center-pointing-right: $base-images-path + '/themes/' + $theme-name + '/bridge/center-image-pointing-right.svg';
-$bridge-image-center-pointing-down: $base-images-path + '/themes/' + $theme-name + '/bridge/center-image-pointing-down@2x.png';
-$bridge-image-left: $base-images-path + '/themes/' + $theme-name + '/bridge/pattern-1.png';
-$bridge-image-right: $base-images-path + '/themes/' + $theme-name + '/bridge/pattern-2.png';
 $bridge-transfer-title-color: $primary-color;
 
 // bridge alert
@@ -140,7 +134,7 @@ $status-authority-logo-2: $base-images-path + '/themes/' + $theme-name + '/statu
 // datablock
 $datablock-value-color: $primary-color;
 $datablock-type-color: $primary-color;
-$datablock-text-color: $text-color;
+$datablock-text-color: $brand-grey-light;
 
 // statistics
 $statistics-title-color: $text-color;

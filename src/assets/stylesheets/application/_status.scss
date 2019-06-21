@@ -1,10 +1,5 @@
 .status-page {
-  .status-page-container {
     padding-bottom: $spacer;
-
-    .status-title {
-      color: $status-text-color;
-    }
 
     .status-configuration-container {
       .status-configuration-data {
@@ -89,7 +84,6 @@
         }
       }
     }
-  }
 
   .status-left-container {
     margin-right: auto;

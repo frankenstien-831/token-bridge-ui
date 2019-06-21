@@ -1,6 +1,5 @@
 import React from 'react'
 import numeral from 'numeral'
-import { InfoIcon } from './icons/InfoIcon'
 
 export const BridgeNetwork = ({
   balance,
@@ -24,15 +23,14 @@ export const BridgeNetwork = ({
 
   return (
     <div className={`network-container-${containerName}`}>
-      <div>
-        <h2 className="network-title">{networkTitle}</h2>
+    <h2 className="network-title">
+        {networkTitle} 
         {networkSubtitle ? <span className="network-name">{networkSubtitle}</span> : null}
-      </div>
-      <p>
-        <span className="network-basic-label">Balance:</span>
-        <span className="network-balance"> {formattedBalance} {currency}</span>
-      </p>
-      {showMore()}
+    </h2>
+    <p className="network-balance">
+        {formattedBalance} {currency}
+    </p>
+    {showMore()}
     </div>
  )
 }

@@ -1,10 +1,5 @@
 .statistics-page {
-  .statistics-page-container {
     padding-bottom: $spacer;
-
-    .statistics-title {
-      color: $statistics-title-color;
-    }
 
     .statistics-bridge-container {
       .statistics-bridge-data {
@@ -86,15 +81,13 @@
       }
     }
 
-  }
+    .statistics-left-container {
+        margin-right: auto;
+        padding-top: 25px;
+        width: 15%;
 
-  .statistics-left-container {
-    margin-right: auto;
-    padding-top: 25px;
-    width: 15%;
-
-    @media screen and (max-width: $tablet-width-landscape) {
-      display: none;
+        @media screen and (max-width: $tablet-width-landscape) {
+            display: none;
+        }
     }
-  }
 }

@@ -43,16 +43,12 @@ export class DailyQuotaModal extends React.Component {
             on ${networkNameTo}`
       : `No limit configured`
     return (
-      <div className="daily-quota-modal-container">
         <div className="daily-quota-modal" style={{left, top}}>
-          <div className='modal-container'>
             <span className="daily-quota-title">Daily Quota</span>
             <span className="daily-quota-description">
-              {description}
+                {description}
             </span>
-          </div>
         </div>
-      </div>
     )
   }
 }
