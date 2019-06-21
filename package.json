@@ -1,7 +1,7 @@
 {
   "name": "token-bridge-ui",
   "description": "Transfer OCEAN Tokens between Ethereum's Main network, and Ocean's Pacific network.",
-  "version": "0.1.0",
+  "version": "2.1.1",
   "private": true,
   "homepage": "https://oceanprotocol.com/",
   "scripts": {
@@ -17,7 +17,9 @@
     "coveralls": "cat ./coverage/lcov.info | node node_modules/.bin/coveralls",
     "eject": "react-app-rewired eject",
     "compile:contracts": "cd submodules/poa-bridge-contracts && npm install && npm run compile && cd ../../ && rm -r -f src/contracts && cp -r submodules/poa-bridge-contracts/build/contracts src/contracts",
-    "postinstall": "cp lib/web3-eth/index.js node_modules/web3-eth/src && npm run compile:contracts"
+    "postinstall": "cp lib/web3-eth/index.js node_modules/web3-eth/src && npm run compile:contracts",
+    "release": "release-it --non-interactive",
+    "changelog": "auto-changelog -p"
   },
   "dependencies": {
     "@oceanprotocol/typographies": "^0.1.0",
@@ -41,6 +43,7 @@
   "devDependencies": {
     "@babel/plugin-proposal-decorators": "^7.4.4",
     "@testing-library/react": "^8.0.1",
+    "auto-changelog": "^1.13.0",
     "chromedriver": "^2.35.0",
     "customize-cra": "^0.2.13",
     "dotenv": "^8.0.0",
@@ -49,6 +52,7 @@
     "mocha": "^6.1.4",
     "node-sass-chokidar": "^1.3.5",
     "nodemon": "^1.19.1",
+    "release-it": "^12.3.0",
     "selenium-webdriver": "^3.6.0"
   },
   "repository": {
@@ -60,5 +64,20 @@
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "release-it": {
+    "hooks": {
+      "after:init": "npm test",
+      "after:bump": "npm run changelog"
+    },
+    "git": {
+      "tagName": "v${version}"
+    },
+    "github": {
+      "release": true
+    },
+    "npm": {
+      "publish": false
+    }
+  }
 }
