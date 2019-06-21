@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-cd submodules/token-bridge-contracts/deploy
+cd submodules/poa-bridge-contracts/deploy
 echo "Deploying Native-Erc contracts"
 node deploy.js
 echo "Deploying erc20 contract"
