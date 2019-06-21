@@ -10,6 +10,7 @@ _Originally forked from [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poane
 
 - [Development](#Development)
   - [Activate Theme](#Activate-Theme)
+- [Testing](#Testing)
 - [Production build](#Production-build)
 - [Releases](#Releases)
 - [Deployment](#Deployment)
@@ -31,6 +32,20 @@ Use environment variable `APP_STYLES` to activate the oceanprotocol theme:
 
 ```bash
 APP_STYLES=oceanprotocol
+```
+
+## Testing
+
+To run unit tests:
+
+```bash
+npm test
+```
+
+You can run the same tests, but with coverage reports generated:
+
+```bash
+npm run coverage
 ```
 
 ## Production build
