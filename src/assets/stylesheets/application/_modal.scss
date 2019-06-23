@@ -27,14 +27,13 @@
     .title {
         color: $modal-title-color;
         margin-top: 0;
-        margin-bottom: $spacer;
+        margin-bottom: $spacer / 2;
         font-size: $font-size-h2;
         font-weight: $font-weight-bold;
     }
 
     .description {
         color: $modal-text-color;
-        font-size: $font-size-small;
         margin-bottom: $spacer / 2;
     }
 

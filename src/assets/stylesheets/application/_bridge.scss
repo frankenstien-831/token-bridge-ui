@@ -272,6 +272,7 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
 
 .noWallet-alert {
     .noWallet-buttons {
+        padding-top: $spacer / 2;
         column-gap: 10px;
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -289,27 +290,15 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
             text-decoration: none;
             text-transform: uppercase;
             font-weight: $font-weight-bold;
-        }
-
-        .noWallet-metamask {
-            background-color: $button-background-color-2;
-            color: $button-text-color-2;   
-        }
-
-        .noWallet-niftyWallet {
-            background-color: $button-background-color-4;
-            color: $button-text-color-4;
-        }
-
-        .noWallet-alphawallet {
-            background-color: $button-background-color-3;
-            color: $button-text-color-3;
+            background-color: $brand-grey-light;
+            color: $button-text-color;
         }
 
         .noWallet-cancel {
             background-color: $button-bordered-background-color;
             border: 1px solid $button-bordered-border-color;
             color: $button-bordered-text-color;
+            cursor: pointer;
 
             &:hover {
                 opacity: 0.7;
@@ -319,57 +308,34 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
 }
 
 .disclaimer-alert {
-    background-color: $modal-background-color;
-    border-radius: 8px;
-    padding: $spacer 0;
-    max-width: 600px;
+    .disclaimer-tos {
+        color: $modal-text-color;
+        padding-left: 5px;
+    }
+    .disclaimer-link {
+        color: $modal-link-color;
+    }
 
-    .alert-container {
-        padding: $spacer * 2;
+    .disclaimer-buttons {
+        padding-top: $spacer / 2;
 
-        .disclaimer-title {
-            color: $modal-title-color;
-            font-size: $font-size-h2;
-            margin-top: 0;
-        }
-        .disclaimer-description {
-            color: $modal-text-color;
-        }
-        .disclaimer-tos {
-            color: $modal-text-color;
-            padding-left: 5px;
-        }
-        .disclaimer-link {
-            color: $modal-link-color;
+        .disclaimer-confirm {
+            font-size: $font-size-small;
+            background: $brand-gradient;
+            border-radius: .2rem;
+            color: $button-text-color;
+            text-transform: uppercase;
+            padding: $spacer / 3 $spacer;
+            cursor: pointer;
         }
 
-        .disclaimer-buttons {
-            .disclaimer-confirm {
-                background-color: $button-background-color;
-                border-radius: 3px;
-                color: $button-text-color;
-                font-size: 15px;
-                font-weight: 700;
-                height: 40px;
-                text-decoration: none;
-                min-width: 100px;
-
-                &:hover {
-                    background-color: darken($button-background-color, 10%);
-                }
-            }
-            .disclaimer-confirm-disabled {
-                background-color: $button-background-color;
-                border-radius: 3px;
-                color: $button-text-color;
-                cursor: default;
-                font-size: 15px;
-                font-weight: 700;
-                height: 40px;
-                opacity: 0.5;
-                text-decoration: none;
-                min-width: 100px;
-            }
+        .disclaimer-confirm-disabled {
+            background: $brand-gradient;
+            border-radius: .2rem;
+            color: $button-text-color;
+            text-transform: uppercase;
+            padding: $spacer / 3;
+            opacity: .5;
         }
     }
 }
@@ -414,37 +380,38 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
     .transfer-description {
         color: $modal-text-color;
     }
+}
 
-    .transfer-buttons {
-        display: flex;
-        justify-content: space-between;
-        padding: $spacer / 2 0 0;
+.transfer-buttons {
+    display: flex;
+    justify-content: space-between;
+    padding: $spacer / 2 0 0;
+}
 
-        .transfer-confirm {
-            background: $brand-gradient;
-            border-radius: .2rem;
-            color: $button-text-color;
-            text-transform: uppercase;
-            flex-grow: 1;
-            height: 40px;
-            max-width: 49%;
-            text-decoration: none;
-        }
+.transfer-confirm,
+.transfer-cancel {
+    border-radius: .2rem;
+    text-transform: uppercase;
+    flex-grow: 1;
+    padding: $spacer / 3;
+    max-width: 49%;
+    font-size: $font-size-small;
+    cursor: pointer;
 
-        .transfer-cancel {
-            background-color: $button-bordered-background-color;
-            border-radius: .2rem;
-            border: 1px solid $button-bordered-border-color;
-            color: $button-bordered-text-color;
-            text-transform: uppercase;
-            flex-grow: 1;
-            height: 40px;
-            max-width: 49%;
-            text-decoration: none;
-
-            &:hover {
-                opacity: 0.7;
-            }
-        }
+    &:hover {
+        opacity: 0.9;
     }
+}
+
+.transfer-confirm {
+    background: $brand-gradient;
+    color: $button-text-color;
+}
+
+.transfer-cancel {
+    background-color: $button-bordered-background-color;
+    border: 1px solid $button-bordered-border-color;
+    color: $button-bordered-text-color;
+
+    
 }
