@@ -5,7 +5,6 @@ import { CopyIcon } from '../icons/CopyIcon'
 import { CopyToClipboard } from 'react-copy-to-clipboard'
 
 export const Event = ({ color, eventName, transactionHash, recipient, value, blockNumber, txUrl, accountUrl }) => (
-  <div>
     <div className="event">
       <div className="event-tx-container txhash-column">
         <span className={`event-name background-${color}`}>{eventName}</span>
@@ -26,7 +25,4 @@ export const Event = ({ color, eventName, transactionHash, recipient, value, blo
       </span>
       <span className="event-block block-column"><strong className="only-mobile">Block</strong>{blockNumber}</span>
     </div>
-    <div className="event-separator" />
-  </div>
-
 )
