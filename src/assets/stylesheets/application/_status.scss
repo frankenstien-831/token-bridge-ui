@@ -1,97 +1,57 @@
+.sub-title {
+    margin-top: 0;
+    text-align: center;
+
+    @media screen and (min-width: $break-point--medium) {
+        text-align: left;
+    }
+}
+
 .status-page {
     padding-bottom: $spacer;
+}
 
-    .status-configuration-container {
-      .status-configuration-data {
+.status-configuration-data {
+    display: grid;
+    grid-gap: $spacer / 2;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: $break-point--medium) {
         display: flex;
         justify-content: space-evenly;
-
-        @media screen and (max-width: $tablet-width) {
-          column-gap: 30px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          row-gap: 20px;
-        }
-      }
     }
+}
 
-    .status-authorities-container {
-      display: flex;
-      flex-direction: column;
-      margin-top: 80px;
+.status-authorities-container {
+    margin-top: $spacer * 3;
+}
 
-      .status-authorities-title {
-        padding-bottom: 30px;
-      }
+.authority {
+    display: flex;
+    align-items: center;
+    padding-bottom: $spacer;
 
-      .status-authorities-data {
-        display: flex;
-        flex-direction: column;
-
-        .authority {
-          display: flex;
-          padding-bottom: 20px;
-
-          .authority-number {
-            color: $status-authority-number-color;
-            font-size: 30px;
-            font-weight: 700;
-            line-height: 59px;
-            padding-right: 20px;
-            text-align: left;
-
-            @media screen and (max-width: $tablet-width) {
-              padding-right: 5px;
-            }
-          }
-
-          .authority-logo {
-            background-position: 50% 50%;
-            background-repeat: no-repeat;
-            background-size: contain;
-            height: 59px;
-            margin-left: 20px;
-            width: 59px;
-
-            &.authority-logo-0 {
-              background-image: url('#{ $status-authority-logo-0 }');
-            }
-            &.authority-logo-1 {
-              background-image: url('#{ $status-authority-logo-1 }');
-            }
-            &.authority-logo-2 {
-              background-image: url('#{ $status-authority-logo-2 }');
-            }
-
-            @media screen and (max-width: $tablet-width) {
-              display: none;
-            }
-          }
-
-          .authority-address {
-            color: $status-authority-address-color;
-            font-size: 16px;
-            font-weight: 700;
-            line-height: 59px;
-            padding-left: 20px;
-            text-align: left;
-
-            @media screen and (max-width: $tablet-width) {
-              font-size: 12px;
-              padding-left: 0;
-            }
-          }
-        }
-      }
+    code {
+        font-size: $font-size-small;
+        font-weight: bold;
+        padding-left: $spacer / 2;
     }
+}
 
-  .status-left-container {
-    margin-right: auto;
-    padding-top: 25px;
-    width: 15%;
+.authority-number {
+    color: $brand-grey-light;
+    font-size: $font-size-h2;
+    padding-right: $spacer / 2;
+    margin-right: $spacer / 2;
+    text-align: left;
+    border-right: 1px solid $brand-grey-lighter;
+    min-width: $spacer;
+    text-align: right;
+}
 
-    @media screen and (max-width: $tablet-width-landscape) {
-      display: none;
-    }
-  }
+.authority-logo {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    margin: 0;
 }

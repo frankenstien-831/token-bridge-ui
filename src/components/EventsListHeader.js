@@ -3,7 +3,7 @@ import React from 'react'
 export const EventsListHeader = ({selected, homeName, homeValue, foreignName, foreignValue, onChangeList, handleChange, handleKeyDown}) => (
   <div>
     <div className="events-header">
-      <h3 className="events-header-title">Events</h3>
+      <h3 className="sub-title">Events</h3>
       <div className="events-filter-container">
         <input onChange={handleChange} onKeyDown={handleKeyDown} type="text" className="events-filter" placeholder="Tx Hash or Block Number..." />
         <span className="events-filter-icon" />

@@ -1,93 +1,55 @@
 .statistics-page {
     padding-bottom: $spacer;
+}
 
-    .statistics-bridge-container {
-      .statistics-bridge-data {
+.statistics-bridge-data,
+.statistics-fee-data {
+    display: grid;
+    grid-gap: $spacer / 2;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: $break-point--medium) {
         display: flex;
         justify-content: space-evenly;
-
-        @media screen and (max-width: $tablet-width) {
-          column-gap: 30px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          row-gap: 20px;
-        }
-      }
     }
+}
 
-    .statistics-fee-container {
-      display: flex;
-      flex-direction: column;
-      padding-top: 90px;
-      width: 50%;
+.statistics-fee-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 90px;
+    width: 50%;
 
-      @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width) {
         width: auto;
         padding-top: 45px;
-      }
-
-      .statistics-fee-data {
-        display: flex;
-        justify-content: space-evenly;
-
-        @media screen and (max-width: $tablet-width) {
-          width: auto;
-          column-gap: 30px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          row-gap: 20px;
-        }
-      }
     }
+}
 
-    .statistics-transaction-container {
-      display: flex;
-      justify-content: space-between;
-      padding-top: 90px;
+.statistics-transaction-container {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 90px;
 
-      @media screen and (max-width: $tablet-width) {
+    @media screen and (max-width: $tablet-width) {
         flex-direction: column;
         padding-top: 45px;
-      }
-
-      .statistics-deposit-container {
-        width: 40%;
-
-        @media screen and (max-width: $tablet-width) {
-          margin-bottom: 40px;
-          width: auto;
-        }
-
-      }
-
-      .statistics-withdraw-container {
-        width: 40%;
-
-        @media screen and (max-width: $tablet-width) {
-          width: auto;
-        }
-      }
-
-      .statistics-bridge-data {
-        display: flex;
-        justify-content: space-evenly;
-
-        @media screen and (max-width: $tablet-width) {
-          column-gap: 30px;
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          row-gap: 20px;
-        }
-      }
     }
+}
 
-    .statistics-left-container {
-        margin-right: auto;
-        padding-top: 25px;
-        width: 15%;
+.statistics-deposit-container {
+    width: 40%;
 
-        @media screen and (max-width: $tablet-width-landscape) {
-            display: none;
-        }
+    @media screen and (max-width: $tablet-width) {
+        margin-bottom: 40px;
+        width: auto;
+    }
+}
+
+.statistics-withdraw-container {
+    width: 40%;
+
+    @media screen and (max-width: $tablet-width) {
+        width: auto;
     }
 }

@@ -1,7 +1,6 @@
 .header {
   background-color: $header-background-color;
   width: 100%;
-  z-index: 9999;
 
   .container {
     align-items: center;
@@ -20,5 +19,4 @@
     height: $header-logo-height;
     width: $header-logo-width;
   }
-
 }

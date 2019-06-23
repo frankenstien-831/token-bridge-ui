@@ -23,31 +23,23 @@ export class StatusPage extends React.Component {
 
     return (
       <div className="status-page">
-        {/* <div className='status-left-container' /> */}
-        <div className='status-page-container'>
-          <div className='status-configuration-container'>
-            <h3 className='status-configuration-title status-title'>Configuration</h3>
-              <Configuration
+        <div className='status-configuration-container'>
+            <h3 className='sub-title'>Configuration</h3>
+            <Configuration
                 requiredSignatures={requiredSignatures}
                 authorities={authorities}
                 symbol={symbol}
                 maxSingleDeposit={maxSingleDeposit}
                 maxTotalBalance={maxTotalBalance} />
-          </div>
-          {withoutEvents ? null :
-            <div className='status-authorities-container'>
-              <h3 className='status-authorities-title status-title'>Authorities</h3>
-              <div className='status-authorities-data'>
-                {validatorsList.map((validator,i) => (
-                  <Authority key={validator} address={validator} number={(i+1)} logoIndex={(i) % 3} />
-                ))}
-              </div>
-            </div>
-          }
         </div>
-        {/* <div className='pattern-background'>
-          <div className="pattern-background-image" />
-        </div> */}
+        {withoutEvents ? null : (
+            <div className='status-authorities-container'>
+                <h3 className='sub-title'>Authorities</h3>
+                {validatorsList.map((validator,i) => (
+                    <Authority key={validator} address={validator} number={(i+1)} />
+                ))}
+            </div>
+        )}
       </div>
     )
   }

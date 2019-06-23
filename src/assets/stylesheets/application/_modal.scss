@@ -1,52 +1,57 @@
 @import '../themes/oceanprotocol/variables';
 
 .network-modal {
-  align-items: center;
-  display: flex;
-  justify-content: center;
-  overflow-y: scroll;
-  -webkit-overflow-scrolling: touch;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    padding-top: 6vh;
+    padding-bottom: 6vh;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
-  .modal {
+.modal {
     background-color: $modal-background-color;
     border-radius: .2rem;
-    padding: $spacer * 2;
-    margin: $spacer;
+    padding: $spacer / 2;
+    margin: $spacer / 2;
     max-width: 640px;
+    width: 100%;
     position: relative;
 
+    @media screen and (min-width: $break-point--small) {
+        padding: $spacer * 2;
+    }
+
     .title {
-      color: $modal-title-color;
-      margin-top: 0;
-      margin-bottom: $spacer;
-      font-size: $font-size-h2;
-      font-weight: $font-weight-bold;
+        color: $modal-title-color;
+        margin-top: 0;
+        margin-bottom: $spacer;
+        font-size: $font-size-h2;
+        font-weight: $font-weight-bold;
     }
 
     .description {
-      color: $modal-text-color;
-      font-size: $font-size-small;
-      margin-bottom: $spacer;
+        color: $modal-text-color;
+        font-size: $font-size-small;
+        margin-bottom: $spacer / 2;
     }
 
     .close-button {
-      padding: $spacer / 2;
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: 400;
+        padding: $spacer / 2;
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: 400;
 
-      i {
-        &.icon {
-          &:before {
-            content: url("../images/modal/close.svg");
-          }
+        .icon {
+            &:before {
+                content: url("../images/modal/close.svg");
+            }
         }
-      }
 
-      &:hover {
-        cursor: pointer;
-      }
+        &:hover {
+            cursor: pointer;
+        }
     }
-  }
 }

@@ -17,10 +17,10 @@ export class Header  extends React.Component {
 
     return (
       <header className="header">
-        {showMobileMenu ? <MobileMenu withoutEvents={withoutEvents} onMenuToggle={onMenuToggle} /> : null}
+        {showMobileMenu && <MobileMenu withoutEvents={withoutEvents} onMenuToggle={onMenuToggle} />}
         <div className="container">
-          <Link to="/" onClick={showMobileMenu ? onMenuToggle : null} className="header-logo" />
-          <HeaderMenu withoutEvents={withoutEvents} onMenuToggle={onMenuToggle} />
+          <Link to="/" onClick={showMobileMenu && onMenuToggle} className="header-logo" />
+          <HeaderMenu withoutEvents={withoutEvents} />
           <MobileMenuButton onMenuToggle={onMenuToggle} showMobileMenu={showMobileMenu} />
         </div>
         {alertStore && alertStore.showDailyQuotaInfo && <DailyQuotaModal/>}
