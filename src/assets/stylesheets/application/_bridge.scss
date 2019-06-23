@@ -12,11 +12,19 @@
 
 .pageTitle {
     margin: 0;
-    font-size: $font-size-h1;
+    font-size: $font-size-h2;
+
+    @media (min-width: $break-point--small) {
+        font-size: $font-size-h1;
+    }
 }
 
 .pageDescription {
     margin-top: $spacer / 2;
+
+    @media (min-width: $break-point--small) {
+        font-size: $font-size-large;
+    }
 }
 
 .bridge {

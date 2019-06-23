@@ -14,25 +14,29 @@ export class Wallet extends React.Component {
     const width = `${completed}%`
 
     const wallet = web3Store.defaultAccount.address !== '' && web3Store.defaultAccount.address !== undefined
-      ? (<a
+      ? (
+        <a
           href={explorerAddressUrl}
           target="_blank"
-          className="wallet-text wallet-link">
-        {web3Store.defaultAccount.address.slice(0,15).concat('...')}
-      </a>)
-      :  (<span className="wallet-text">Login with wallet</span>)
+          className="wallet-text wallet-link" title={`View address ${web3Store.defaultAccount.address} in explorer`}
+        >
+            <code>{web3Store.defaultAccount.address.slice(0,15).concat('...')}</code>
+        </a>
+      )
+      : <span className="wallet-text">Login with wallet</span>
 
     return (
-      <div className="header-wallet"
+      <div 
+        className="header-wallet"
         onMouseEnter={() => alertStore.setShowDailyQuotaInfo(true)}
         onMouseLeave={() => alertStore.setShowDailyQuotaInfo(false)}
-      >
+    >
         <div className="wallet-container">
-          <span className="wallet-icon">{<WalletIcon />}</span>
-          <code>{wallet}</code>
+            <WalletIcon />
+            {wallet}
         </div>
         <div className="daily-quota-container">
-          {web3Store.metamaskNet.id && <div className="daily-quota-progress" style={{width}} />}
+            {web3Store.metamaskNet.id && <div className="daily-quota-progress" style={{width}} />}
         </div>
       </div>
     )

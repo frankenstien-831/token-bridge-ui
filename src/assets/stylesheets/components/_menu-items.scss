@@ -1,29 +1,33 @@
-.menu-items {
+.menu-item {
     font-weight: $font-weight-bold;
     text-transform: uppercase;
-    font-size: $font-size-small;
+    font-size: $font-size-base;
     margin: 0 $spacer;
     text-decoration: none;
+    color: rgba($header-menu-text-color, .7);
+    white-space: nowrap;
 
     @media screen and (max-width: $mobile-width) {
         margin-left: 0;
     }
 
-    &:hover {
+    &:hover,
+    &:focus,
+    &.active {
         text-decoration: none;
+        color: $header-menu-text-color;
+        transform: none;
+
+        svg {
+            fill: $header-menu-text-color;
+        }
     }
-}
 
-.menu-items-text {
-    color: $header-menu-text-color;
-    margin-left: 10px;
-}
-
-.menu-items-icon {
-    display: inline-block;
-    margin-bottom: -.2rem;
-
-    path {
+    svg {
+        display: inline-block;
+        margin-right: 10px;
+        margin-bottom: -.2rem;
         fill: $brand-grey-light;
+        transition: .2s ease-out;
     }
 }
