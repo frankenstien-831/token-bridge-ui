@@ -1,7 +1,7 @@
 import React from 'react';
 import { Header, Bridge, RelayEvents, Footer, SweetAlert, Loading, StatusPage, StatisticsPage } from './components';
 import { Route } from 'react-router-dom'
-import './assets/stylesheets/application.css';
+import './assets/stylesheets/application.oceanprotocol.css';
 import { Disclaimer } from './components'
 import { ModalContainer } from './components'
 import { NoWallet } from './components'
