@@ -26,6 +26,7 @@ node_js:
 
 script:
   - npm run coverage
+  - npm run build
   # - cd e2e-script && ./run-tests.sh
 
 cache: npm
