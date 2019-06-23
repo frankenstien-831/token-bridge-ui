@@ -1,0 +1,70 @@
+.swal-overlay {
+    background-color: $modal-overlay-background-color;
+}
+
+.swal-modal {
+    background-color: $modal-background-color;
+    border-radius: .2rem;
+    padding: $spacer / 2;
+    margin: $spacer / 2;
+    max-width: 640px;
+    width: 100%;
+    position: relative;
+    will-change: transform;
+
+    &.swal-overlay--show-modal {
+        animation: showSweetAlert .2s ease-out;
+    }
+}
+
+.swal-title {
+    color: $modal-title-color;
+    margin-top: 0;
+    margin-bottom: $spacer;
+    font-size: $font-size-h2;
+    font-weight: $font-weight-bold;
+}
+
+.swal-text {
+    color: $modal-text-color;
+    font-size: $font-size-small;
+    margin-bottom: $spacer / 2;
+}
+
+.swal-footer {
+    text-align: center;
+}
+
+.swal-button {
+    background: $brand-gradient;
+    border-radius: .2rem;
+    color: $button-text-color;
+    text-transform: uppercase;
+    height: 40px;
+    text-decoration: none;
+
+    &:focus {
+        outline: 0;
+    }
+}
+
+.swal-icon {
+    display: inline-block;
+}
+
+.swal-icon--error {
+    border-color: $red;
+}
+
+.swal-icon--error__line {
+    background-color: $red;
+}
+
+@keyframes showSweetAlert {
+    0% {
+        transform: scale(0.9) translate3d(0, 3rem, 0);
+    }
+    100% {
+        transform: scale(1) translate3d(0, 0, 0);
+    }
+}

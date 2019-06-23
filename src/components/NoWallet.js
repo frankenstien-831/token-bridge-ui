@@ -23,12 +23,9 @@ export class NoWallet extends Component {
     return (
       <ModalContainer showModal={showModal && this.state.showModal}>
         <div className="noWallet-alert">
-          <div className="noWallet-alert-container">
             <h2 className="title">Wallet not found</h2>
-            <p className="description">A wallet is not installed. Before continue, please install one (AlphaWallet, Metamask
-              or Nifty Wallet) and return to this page to continue using the application.</p>
-            <p className="description">For further information on how to install any of both wallets, please
-              click the buttons below.</p>
+            <p className="description">A wallet is not installed. For using this application you need to have a Web3 wallet installed in your browser.</p>
+            <p className="description">Check out the following links to learn how to install one of these wallets.</p>
             <div className="noWallet-buttons">
               <a
                 className="noWallet-metamask"
@@ -56,7 +53,6 @@ export class NoWallet extends Component {
               </a>
               <button className="noWallet-cancel" onClick={this.handleCancel}>Cancel</button>
             </div>
-          </div>
         </div>
       </ModalContainer>
     )
