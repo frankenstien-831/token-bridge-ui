@@ -1,11 +1,11 @@
 import React from 'react';
 import { Header, Bridge, RelayEvents, Footer, SweetAlert, Loading, StatusPage, StatisticsPage } from './components';
 import { Route } from 'react-router-dom'
-import './assets/stylesheets/application.oceanprotocol.css';
 import { Disclaimer } from './components'
 import { ModalContainer } from './components'
 import { NoWallet } from './components'
 import { setItem, getItem, DISCLAIMER_KEY } from './components/utils/localstorage'
+import './assets/stylesheets/application.oceanprotocol.css';
 
 export class App extends React.Component {
   state = {
@@ -49,9 +49,7 @@ export class App extends React.Component {
           <Route exact path="/statistics" component={StatisticsPage}/>
         </div>
         {/* <Route component={Footer}/> */}
-        <ModalContainer
-          showModal={showDisclaimer}
-        >
+        <ModalContainer showModal={showDisclaimer}>
           <Disclaimer onConfirmation={this.closeDisclaimer} />
         </ModalContainer>
         <NoWallet showModal={!showDisclaimer} />
