@@ -143,8 +143,7 @@ export class RelayEvents extends React.Component {
 
     return withoutEvents ? (<Redirect to="/" />) : (
       <div className="events-page">
-        <div className="events-container">
-          <EventsListHeader
+        <EventsListHeader
             handleChange={selectedList === this.homeValue ? this.handleChangeHome : this.handleChangeForeign}
             handleKeyDown={selectedList === this.homeValue ? this.handleKeyDownHome : this.handleKeyDownForeign}
             onChangeList={this.onChangeList}
@@ -153,21 +152,20 @@ export class RelayEvents extends React.Component {
             homeValue={this.homeValue}
             foreignName={foreignStore.networkName}
             foreignValue={this.foreingValue} />
-          {selectedList === this.homeValue
-            && home.map(event =>
-            <Event
-              txUrl={homeStore.getExplorerTxUrl(event.transactionHash)}
-              accountUrl={homeStore.getExplorerAddressUrl(event.recipient)}
-              key={event.transactionHash+event.eventName}
-              {...event} />)}
-          {selectedList === this.foreingValue
-            && foreign.map(event =>
-            <Event
-              txUrl={foreignStore.getExplorerTxUrl(event.transactionHash)}
-              accountUrl={foreignStore.getExplorerAddressUrl(event.recipient)}
-              key={event.transactionHash+event.eventName}
-              {...event} />)}
-        </div>
+        {selectedList === this.homeValue
+        && home.map(event =>
+        <Event
+            txUrl={homeStore.getExplorerTxUrl(event.transactionHash)}
+            accountUrl={homeStore.getExplorerAddressUrl(event.recipient)}
+            key={event.transactionHash+event.eventName}
+            {...event} />)}
+        {selectedList === this.foreingValue
+        && foreign.map(event =>
+        <Event
+            txUrl={foreignStore.getExplorerTxUrl(event.transactionHash)}
+            accountUrl={foreignStore.getExplorerAddressUrl(event.recipient)}
+            key={event.transactionHash+event.eventName}
+            {...event} />)}
       </div>
     );
   }

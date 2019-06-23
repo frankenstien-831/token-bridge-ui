@@ -1,101 +1,4 @@
 .events-page {
-  .events-container {
-    .events-header {
-      display: flex;
-      justify-content: space-between;
-
-      @media screen and (max-width: $mobile-width) {
-        flex-direction: column;
-      }
-
-      .events-header-title {
-        color: $events-title-color;
-        margin-bottom: 0;
-      }
-
-      .events-filter-container {
-        background-color: #fff;
-        border-radius: 3px;
-        border: solid 1px #dadada;
-        display: flex;
-        height: 38px;
-        width: 400px;
-
-        @media screen and (max-width: $tablet-width) {
-          width: auto;
-        }
-
-        .events-filter {
-          color: $events-filter-color;
-          font-size: 14px;
-          line-height: 38px;
-          padding-left: 10px;
-          width: 205px;
-
-          @media screen and (max-width: 330px) {
-            width: 180px;
-          }
-
-          &::placeholder {
-            color: #b2b2b2;
-          }
-        }
-
-        .events-filter-icon {
-          align-self: center;
-          background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAA0lBMVEWAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6McEf5GAAAARXRSTlMAAQIDBQYHDA0bHB8gISQmJyg+P0BGR0lMU1RVWFlcXV5iY2tsdXZ4iYqLo6Spqqusra7Cw8TFysvM29zm5+jr8vP4+fzSh6raAAABM0lEQVR4AYWTeVeCQBTFr6AtuaTYkpUVlqZm0JIaLhjBfP+v1NxDyDCcA7+/3nLPecu8QULFGs/9MPTnE6uCPIa9EntWtgGN5lJkWDaR4WwnNHYWFM5DxsLXfqN22Ok7sXeR5ts/jHy0Er/1Tj9oJ77J+tEICqOIfZiIsalnXlUwNvifn/O50HA5bQWky45OoHHMTrsgY2nNkONFhscgX9K6Ro6eDH+C+NKqI0ddhn0QFjtAjhpb2wuOigQscVpQorzJScGYRYv65aLSVTvQcLhqI7YHQjJEhqHyWDC/+dxPUHjkc3tm4nYC6t/Sg3GFdgGX8ZHNeo1qtdGb0ZNEd4oiEBq6ouNlc95zRMW9+nHWaXptG3jQFTCs6YJfbzG1OL+m0EkVt2WKLUoUGxRxs91c/QFA1F3oKOgExAAAAABJRU5ErkJggg==);
-          background-position: center center;
-          background-repeat: no-repeat;
-          background-size: 16px 16px;
-          display: inline-block;
-          height: 16px;
-          margin-left: 5px;
-          margin-right: 10px;
-          width: 16px;
-        }
-
-        .events-select {
-          background-color: #fff;
-          border-left: solid 1px #dadada;
-          border: solid 1px white;
-          color: $events-select-color;
-          font-size: 14px;
-          height: 38px;
-          line-height: 38px;
-          text-align: left;
-          width: 154px;
-
-          @media screen and (max-width: $tablet-width) {
-            width: auto;
-          }
-        }
-      }
-    }
-
-    .events-columns {
-      display: flex;
-      justify-content: space-between;
-      margin-top: 38px;
-
-      .column-title {
-        color: $events-column-title-color;
-        font-size: 14px;
-        font-weight: 700;
-        text-align: left;
-      }
-
-      @media screen and (max-width: $tablet-width) {
-        display: none;
-      }
-    }
-
-    .events-header-separator {
-      background-color: #e4e4e4;
-      height: 3px;
-      margin-top: 20px;
-      width: 100%;
-    }
-
     .txhash-column {
       width: 375px;
 
@@ -121,8 +24,9 @@
       display: flex;
       justify-content: space-between;
       line-height: 26px;
-      padding-bottom: 22px;
-      padding-top: 22px;
+      padding-bottom: $spacer;
+      padding-top: $spacer;
+      border-bottom: 1px solid $brand-grey-lighter;
 
       @media screen and (max-width: $tablet-width) {
         flex-direction: column;
@@ -140,8 +44,8 @@
       .event-name {
         border-radius: 3px;
         color: #fff;
-        font-size: 14px;
-        font-weight: 700;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
         height: 26px;
         line-height: 26px;
         margin-right: 5px;
@@ -156,7 +60,7 @@
 
       .event-txhash {
         color: $primary-color;
-        font-size: 14px;
+        font-size: $font-size-small;
         text-align: left;
         text-decoration: none;
       }
@@ -169,7 +73,7 @@
 
     .event-recipient {
       color: $primary-color;
-      font-size: 14px;
+      font-size: $font-size-small;
       text-align: left;
       text-decoration: none;
     }
@@ -180,25 +84,128 @@
 
     .event-value {
       color: $events-value-color;
-      font-size: 14px;
+      font-size: $font-size-small;
       text-align: left;
     }
 
     .event-block {
       color: $events-block-color;
-      font-size: 14px;
+      font-size: $font-size-small;
       text-align: right;
 
       @media screen and (max-width: $tablet-width) {
         text-align: left;
       }
     }
-
-    .event-separator {
-      background-color: #e4e4e4;
-      height: 1px;
-      width: 100%;
-    }
-  }
 }
 
+.events-header {
+    display: flex;
+    justify-content: space-between;
+
+    @media screen and (max-width: $mobile-width) {
+        flex-direction: column;
+    }
+}
+
+.events-header-title {
+    color: $events-title-color;
+    margin-bottom: 0;
+}
+
+.events-filter-container {
+    background-color: $brand-white;
+    border-radius: .2rem;
+    border: solid 1px $brand-grey-lighter;
+    display: flex;
+    justify-content: space-between;
+    height: 38px;
+    width: 400px;
+    overflow: hidden;
+
+    @media screen and (max-width: $tablet-width) {
+        width: auto;
+    }    
+}
+
+.events-select {
+    background-color: $brand-white;
+    box-shadow: none;
+    border: 0;
+    border-radius: 0;
+    border-left: 1px solid $brand-grey-lighter;
+    color: $events-select-color;
+    font-size: $font-size-small;
+    font-family: $font-family-base;
+    font-weight: $font-weight-bold;
+    height: 38px;
+    text-align: left;
+    padding-right: 2rem;
+    padding-left: $spacer / 4;
+    appearance: none;
+
+    // custom arrow
+    background-image: linear-gradient(45deg, transparent 50%, $brand-purple 50%),
+        linear-gradient(135deg, $brand-purple 50%, transparent 50%),
+        linear-gradient(
+            to right,
+            $brand-grey-lighter 1px,
+            lighten($brand-grey-lighter, 5%) 2px,
+            lighten($brand-grey-lighter, 5%)
+        );
+    background-position: calc(100% - 14px) 1rem, calc(100% - 9px) 1rem, 100% 0;
+    background-size: 5px 5px, 5px 5px, 2rem 3rem;
+    background-repeat: no-repeat;
+
+    &:focus {
+        outline: 0;
+        font-family: $font-family-base;
+    }
+}
+
+.events-filter {
+    color: $events-filter-color;
+    font-size: $font-size-small;
+    padding-right: $spacer / 4;
+    width: 205px;
+
+    @media screen and (max-width: 330px) {
+        width: 180px;
+    }
+
+    &::placeholder {
+        color: $brand-grey-light;
+    }
+}
+
+.events-filter-icon {
+    align-self: center;
+    background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAMAAABEpIrGAAAA0lBMVEWAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6OAl6McEf5GAAAARXRSTlMAAQIDBQYHDA0bHB8gISQmJyg+P0BGR0lMU1RVWFlcXV5iY2tsdXZ4iYqLo6Spqqusra7Cw8TFysvM29zm5+jr8vP4+fzSh6raAAABM0lEQVR4AYWTeVeCQBTFr6AtuaTYkpUVlqZm0JIaLhjBfP+v1NxDyDCcA7+/3nLPecu8QULFGs/9MPTnE6uCPIa9EntWtgGN5lJkWDaR4WwnNHYWFM5DxsLXfqN22Ok7sXeR5ts/jHy0Er/1Tj9oJ77J+tEICqOIfZiIsalnXlUwNvifn/O50HA5bQWky45OoHHMTrsgY2nNkONFhscgX9K6Ro6eDH+C+NKqI0ddhn0QFjtAjhpb2wuOigQscVpQorzJScGYRYv65aLSVTvQcLhqI7YHQjJEhqHyWDC/+dxPUHjkc3tm4nYC6t/Sg3GFdgGX8ZHNeo1qtdGb0ZNEd4oiEBq6ouNlc95zRMW9+nHWaXptG3jQFTCs6YJfbzG1OL+m0EkVt2WKLUoUGxRxs91c/QFA1F3oKOgExAAAAABJRU5ErkJggg==);
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: 16px 16px;
+    display: inline-block;
+    height: 16px;
+    margin-left: $spacer / 4;
+    margin-right: $spacer / 6;
+    width: 16px;
+}
+
+.events-columns {
+    display: flex;
+    justify-content: space-between;
+    margin-top: $spacer;
+    padding-bottom: $spacer / 2;
+    border-bottom: .1rem solid $brand-grey-lighter;
+
+    .column-title {
+        color: $events-column-title-color;
+        font-size: $font-size-small;
+        font-weight: $font-weight-bold;
+        text-align: left;
+    }
+
+    @media screen and (max-width: $tablet-width) {
+        display: none;
+    }
+}
