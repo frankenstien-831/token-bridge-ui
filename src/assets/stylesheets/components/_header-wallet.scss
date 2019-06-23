@@ -1,32 +1,33 @@
 .header-wallet {
-    border-left: 1px solid $primary-color-dark;
+    border-left: 1px solid $brand-grey;
     width: 220px;
+    padding-top: $spacer / 2;
+    padding-bottom: $spacer / 2;
+    padding-left: $spacer;
 }
 
 .wallet-container {
-    display: flex;
-    padding-left: 20px;
-
-    .wallet-icon {
-        margin-right: 10px;
-
-        path {
-            fill: $brand-grey-light;
-        }
-    }
-
-    .wallet-text {
-        color: #fff;
+    &,
+    code {
+        color: rgba($header-menu-text-color, .7);
         font-size: $font-size-small;
         font-weight: bold;
-        
-        &:hover {
-            text-decoration: none;
-        }
     }
 
-    .wallet-link {
-        cursor: pointer;
+    svg {
+        display: inline-block;
+        margin-right: $spacer / 4;
+        margin-bottom: -.15rem;
+        fill: $brand-grey-light;
+    }
+}
+
+.wallet-link {
+    &:hover,
+    &:focus {
+        code {
+            color: $header-menu-text-color;
+        }
     }
 }
 
@@ -34,9 +35,8 @@
     background-color: $daily-quota-background;
     border-radius: 3px;
     height: 6px;
-    margin-left: 20px;
     margin-bottom: -6px;
-    margin-top: 3px;
+    margin-top: $spacer / 8;
     width: 180px;
 
     .daily-quota-progress {

@@ -21,7 +21,7 @@ export class DailyQuotaModal extends React.Component {
       const offsets =  offsetsElement[0].getBoundingClientRect();
       const height = offsets.height;
       const left = offsets.left;
-      this.setState({left, top: height + 20})
+      this.setState({left, top: height + 30})
     } else {
       setTimeout(this.getPosition, 100)
     }
@@ -44,10 +44,10 @@ export class DailyQuotaModal extends React.Component {
       : `No limit configured`
     return (
         <div className="daily-quota-modal" style={{left, top}}>
-            <span className="daily-quota-title">Daily Quota</span>
-            <span className="daily-quota-description">
+            <h1 className="daily-quota-title">Daily Quota</h1>
+            <p className="daily-quota-description">
                 {description}
-            </span>
+            </p>
         </div>
     )
   }
