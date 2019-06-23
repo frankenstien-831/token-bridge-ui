@@ -63,7 +63,7 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
     border: 1px solid $brand-grey-lighter;
     background: $brand-white url($bridge-background-image-mobile) no-repeat center center;
     background-size: contain;
-    padding: $spacer * 2 $spacer;
+    padding: $spacer;
     
     @media (min-width: $break-point--small) {
         padding: $spacer * 3 $spacer $spacer * 2 $spacer;

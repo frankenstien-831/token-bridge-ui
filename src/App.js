@@ -33,7 +33,7 @@ export class App extends React.Component {
   render() {
     const { showDisclaimer, showMobileMenu } = this.state
     return (
-      <div className={showMobileMenu ? 'mobile-menu-is-open' : ''}>
+      <>
         <Route component={Loading}/>
         <Route component={SweetAlert}/>
         <Route render={() =>
@@ -43,7 +43,6 @@ export class App extends React.Component {
           />
         }/>
         <div className="app-container">
-          {showMobileMenu && <Route render={() => <div className="mobile-menu-open"/>}/>}
           <Route exact path="/" component={Bridge}/>
           <Route exact path="/events" component={RelayEvents}/>
           <Route exact path="/status" component={StatusPage}/>
@@ -56,7 +55,7 @@ export class App extends React.Component {
           <Disclaimer onConfirmation={this.closeDisclaimer} />
         </ModalContainer>
         <NoWallet showModal={!showDisclaimer} />
-      </div>
+      </>
     )
   }
 }

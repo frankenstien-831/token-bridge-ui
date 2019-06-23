@@ -1,34 +1,43 @@
 .datablock-container {
-    align-items: center;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    align-items: center;
 
+    @media screen and (min-width: $break-point--medium) {
+        justify-content: space-evenly;
+    }
+    
     p {
         margin: 0;
     }
+}
 
-    @media screen and (max-width: $tablet-width) {
-      align-items: normal;
-      justify-content: flex-start;
-    }
+.datablock-value {
+    color: $datablock-value-color;
+    font-size: $font-size-base;
+    font-weight: $font-weight-bold;
 
-    .datablock-value {
-      color: $datablock-value-color;
-      font-size: $font-size-h2;
-      font-weight: bold;
+    @media screen and (min-width: $break-point--small) {
+        font-size: $font-size-h2;
     }
+}
 
-    .datablock-type {
-      color: $datablock-type-color;
-      font-size: $font-size-large;
-      margin-left: $spacer / 2;
-    }
+.datablock-type {
+    color: $datablock-type-color;
+    margin-left: $spacer / 6;
 
-    .datablock-description {
-      color: $datablock-text-color;
-      font-size: $font-size-small;
-      font-weight: $font-weight-bold;
-      margin-top: $spacer / 4;
+    @media screen and (min-width: $break-point--small) {
+        font-size: $font-size-large;
     }
-  }
+}
+
+.datablock-description {
+    color: $datablock-text-color;
+    font-size: $font-size-mini;
+    font-weight: $font-weight-bold;
+    margin-top: $spacer / 2;
+
+    @media screen and (min-width: $break-point--small) {
+        font-size: $font-size-small;
+    }
+}
