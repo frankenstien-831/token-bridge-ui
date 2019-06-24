@@ -2,11 +2,16 @@
 
 # Ocean Token Bridge UI
 
-> 🌉 Transfer OCEAN Tokens between Ethereum's Main network, and Ocean's Pacific network.
+> 🌉 Transfer OCEAN Tokens between Ethereum's Main network, and Ocean's Pacific network. Originally forked from [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poanetwork/bridge-ui/releases/tag/2.1.1) ([`0342e0a`](https://github.com/oceanprotocol/token-bridge-ui/commit/0342e0ae89afd51860064f8c882c55c62777582c)).
 
 [![Build Status](https://travis-ci.com/oceanprotocol/token-bridge-ui.svg?token=3psqw6c8KMDqfdGQ2x6d&branch=master)](https://travis-ci.com/oceanprotocol/token-bridge-ui)
 
-_Originally forked from [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poanetwork/bridge-ui/releases/tag/2.1.1) ([`0342e0a`](https://github.com/oceanprotocol/token-bridge-ui/commit/0342e0ae89afd51860064f8c882c55c62777582c))._
+<img width="1229" alt="Screen Shot 2019-06-24 at 11 53 23" src="https://user-images.githubusercontent.com/90316/60011872-02956600-967b-11e9-944c-597038010918.png">
+
+Under the hood, uses:
+
+- [oceanprotocol/token-bridge-contracts](https://github.com/oceanprotocol/token-bridge-contracts)
+- [oceanprotocol/token-bridge-validator](https://github.com/oceanprotocol/token-bridge-validator)
 
 **Table of Contents**
 - [Contracts](#Contracts)
@@ -27,7 +32,7 @@ The original fork of [`poanetwork/bridge-ui:v2.1.1`](https://github.com/poanetwo
 
 ## Development
 
-- requires Node.js `v9` (because of )
+- requires Node.js `v9` (because of [oceanprotocol/token-bridge-contracts](https://github.com/oceanprotocol/token-bridge-contracts))
 
 To start development you need to:
 
@@ -38,11 +43,7 @@ npm start
 
 ### Activate Theme
 
-Use environment variable `APP_STYLES` to activate the oceanprotocol theme:
-
-```bash
-APP_STYLES=oceanprotocol
-```
+The `oceanprotocol` theme is directly loaded in `src/App.js` so no further configuration is required.
 
 ## Testing
 
