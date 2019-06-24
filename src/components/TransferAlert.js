@@ -1,5 +1,4 @@
 import React from 'react'
-import arrowsIcon from '../assets/images/transfer-modal/icon-arrows@2x.png'
 import numeral from 'numeral'
 import { ArrowRight } from './icons/ArrowRight'
 
@@ -27,7 +26,7 @@ export const TransferAlert = ({
 
           <div className="alert-logo-box">
             <div className={reverse ? 'foreign-logo' : 'home-logo'} />
-            <div className="transfer-network">{reverse ? from : to}</div>
+            <div className="transfer-network">{from}</div>
           </div>
           <div><strong>{formattedFromAmount}</strong> {fromCurrency}</div>
 
@@ -36,7 +35,7 @@ export const TransferAlert = ({
           <div><strong>{formattedToAmount}</strong> {toCurrency}</div>
           <div className="alert-logo-box">
             <div className={reverse ? 'home-logo' : 'foreign-logo'} />
-            <div className="transfer-network">{reverse ? to : from}</div>
+            <div className="transfer-network">{to}</div>
           </div>
 
         </div>

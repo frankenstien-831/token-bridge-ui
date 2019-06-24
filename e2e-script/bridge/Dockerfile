@@ -10,5 +10,5 @@ RUN apt-get clean
 RUN git clone https://github.com/poanetwork/bridge-nodejs.git
 WORKDIR /bridge-nodejs
 RUN git fetch && git checkout develop
-RUN cd submodules/poa-bridge-contracts && git submodule update --init --recursive
+RUN cd submodules/token-bridge-contracts && git submodule update --init --recursive
 RUN npm install

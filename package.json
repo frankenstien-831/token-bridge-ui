@@ -1,7 +1,7 @@
 {
   "name": "token-bridge-ui",
   "description": "Transfer OCEAN Tokens between Ethereum's Main network, and Ocean's Pacific network.",
-  "version": "2.1.1",
+  "version": "3.0.1",
   "private": true,
   "homepage": "https://oceanprotocol.com/",
   "scripts": {
@@ -10,12 +10,13 @@
     "start": "concurrently \"react-app-rewired start\" \"npm run watch-css\"",
     "build": "npm run compile:contracts && npm run build-css && react-app-rewired build",
     "select-css-theme": "node scripts/selectTheme.js",
-    "test": "react-app-rewired test --env=jsdom",
+    "test": "react-app-rewired test --env=jsdom --watchAll=false",
+    "test:watch": "react-app-rewired test --env=jsdom",
     "startE2e": "mocha -b ./e2e-script/test.js",
     "start:blocks": "node ./e2e-script/scripts/blocks.js",
     "coverage": "react-app-rewired test --env=jsdom --coverage",
     "eject": "react-app-rewired eject",
-    "compile:contracts": "cd submodules/poa-bridge-contracts && npm install && npm run compile && cd ../../ && rm -r -f src/contracts && cp -r submodules/poa-bridge-contracts/build/contracts src/contracts",
+    "compile:contracts": "cd submodules/token-bridge-contracts && npm install && npm run compile && cd ../../ && rm -r -f src/contracts && cp -r submodules/token-bridge-contracts/build/contracts src/contracts",
     "postinstall": "cp lib/web3-eth/index.js node_modules/web3-eth/src && npm run compile:contracts",
     "release": "release-it --non-interactive",
     "changelog": "auto-changelog -p"
