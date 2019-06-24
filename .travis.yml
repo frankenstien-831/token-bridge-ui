@@ -3,6 +3,16 @@ language: node_js
 node_js:
   - "9"
 
+# Handle git submodules on our own
+# Will only work for public submodules
+git:
+    submodules: false
+
+before_install:
+    # Use sed to replace the SSH URL with the public URL, then initialize submodules
+    - sed -i 's/git@github.com:/https:\/\/github.com\//' .gitmodules
+    - git submodule update --init --recursive
+
 # services:
 # - docker
 
