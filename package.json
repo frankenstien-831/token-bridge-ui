@@ -15,7 +15,7 @@
     "start:blocks": "node ./e2e-script/scripts/blocks.js",
     "coverage": "react-app-rewired test --env=jsdom --coverage",
     "eject": "react-app-rewired eject",
-    "compile:contracts": "cd submodules/poa-bridge-contracts && npm install && npm run compile && cd ../../ && rm -r -f src/contracts && cp -r submodules/poa-bridge-contracts/build/contracts src/contracts",
+    "compile:contracts": "cd submodules/token-bridge-contracts && npm install && npm run compile && cd ../../ && rm -r -f src/contracts && cp -r submodules/token-bridge-contracts/build/contracts src/contracts",
     "postinstall": "cp lib/web3-eth/index.js node_modules/web3-eth/src && npm run compile:contracts",
     "release": "release-it --non-interactive",
     "changelog": "auto-changelog -p"
