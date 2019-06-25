@@ -1,4 +1,4 @@
-FROM node:10-alpine
+FROM node:9-alpine
 LABEL maintainer="Ocean Protocol <devops@oceanprotocol.com>"
 
 RUN apk add --no-cache --update\
@@ -13,11 +13,10 @@ RUN apk add --no-cache --update\
 COPY . /bridge/
 WORKDIR /bridge
 
-RUN npm install -g npm serve
-RUN npm install
-RUN rm -rf /bridge/node_modules/websocket/.git
-RUN npm run build
-RUN npm run postinstall
+RUN npm install -g npm serve && \
+    npm install && npm run postinstall && \
+    rm -rf /bridge/node_modules/websocket/.git && \
+    npm run build
 
 # Default ENV values
 ENV LISTEN_ADDRESS='0.0.0.0'
