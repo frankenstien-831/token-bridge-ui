@@ -1,8 +1,17 @@
 import React from 'react'
 import meta from '../meta.json'
+import { name, version, repository } from '../../package.json'
 
 export const Footer = () => (
   <footer className="footer">
+    <p>
+        <a 
+            href={`${repository.url}/releases/tag/v${version}`} 
+            title={`See ${name} release v${version}`}
+        >
+            v{version}
+        </a>
+    </p>
     <div>
         <small>
             &copy; {new Date().getFullYear()}{' '}
