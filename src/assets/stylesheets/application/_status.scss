@@ -12,18 +12,12 @@
 }
 
 .status-configuration-data {
-    display: grid;
-    grid-gap: $spacer / 2;
-    grid-template-columns: 1fr 1fr;
-
-    @media screen and (min-width: $break-point--medium) {
-        display: flex;
-        justify-content: space-evenly;
-    }
+    @extend %box;
+    @extend %grid__stats;
 }
 
 .status-authorities-container {
-    margin-top: $spacer * 3;
+    margin-top: $spacer * 2;
 }
 
 .authority {

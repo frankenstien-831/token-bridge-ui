@@ -4,52 +4,25 @@
 
 .statistics-bridge-data,
 .statistics-fee-data {
-    display: grid;
-    grid-gap: $spacer / 2;
-    grid-template-columns: 1fr 1fr;
+    @extend %box;
+    @extend %grid__stats;
+}
 
+.statistics-bridge-data {
+    margin-bottom: $spacer * 2;
+}
+
+.statistics-fee-container,
+.statistics-transaction-container {
     @media screen and (min-width: $break-point--medium) {
         display: flex;
-        justify-content: space-evenly;
+        justify-content: space-between;
     }
 }
 
-.statistics-fee-container {
-    display: flex;
-    flex-direction: column;
-    padding-top: 90px;
-    width: 50%;
-
-    @media screen and (max-width: $tablet-width) {
-        width: auto;
-        padding-top: 45px;
-    }
-}
-
-.statistics-transaction-container {
-    display: flex;
-    justify-content: space-between;
-    padding-top: 90px;
-
-    @media screen and (max-width: $tablet-width) {
-        flex-direction: column;
-        padding-top: 45px;
-    }
-}
-
-.statistics-deposit-container {
-    width: 40%;
-
-    @media screen and (max-width: $tablet-width) {
-        margin-bottom: 40px;
-        width: auto;
-    }
-}
-
+.statistics-deposit-container,
 .statistics-withdraw-container {
-    width: 40%;
-
-    @media screen and (max-width: $tablet-width) {
-        width: auto;
+    @media screen and (min-width: $break-point--medium) {
+        width: 48%;
     }
 }
