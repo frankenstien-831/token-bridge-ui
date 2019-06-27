@@ -48,7 +48,7 @@ export class App extends React.Component {
           <Route exact path="/status" component={StatusPage}/>
           <Route exact path="/statistics" component={StatisticsPage}/>
         </div>
-        {/* <Route component={Footer}/> */}
+        <Route component={Footer}/>
         <ModalContainer showModal={showDisclaimer}>
           <Disclaimer onConfirmation={this.closeDisclaimer} />
         </ModalContainer>
