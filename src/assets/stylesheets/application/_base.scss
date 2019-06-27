@@ -94,10 +94,10 @@ button {
   position: relative;
   width: 100%;
   max-width: $container-width;
-  padding: $spacer $spacer / 2;
+  padding: $spacer $spacer / 2 $spacer / 2 $spacer / 2;
 
   @media screen and (min-width: $break-point--small) {
-    padding: $spacer * 2 0;
+    padding: $spacer * 2 0 $spacer / 2 0;
   }
 }
 

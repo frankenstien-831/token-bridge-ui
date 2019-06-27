@@ -1,39 +1,50 @@
 .footer {
-  @extend %full-width;
-  background-color: $footer-background-color;
-  bottom: 0;
-  color: $footer-text-color;
-  padding: 18px 0;
-  position: absolute;
+    color: $brand-grey-light;
+    width: 100%;
+    text-align: center;
+    margin-top: $spacer;
+    padding: $spacer calc(#{$spacer} + #{$page-frame / 2} );
+    align-self: flex-end;
 
-  .container {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    > div {
+        align-self: flex-end;
 
-    @media screen and (max-width: $tablet-width) {
-      flex-direction: column;
+        @media screen and (min-width: $break-point--small) {
+            text-align: left;
+            display: flex;
+            justify-content: space-between;
+        }
     }
-  }
 
-  .social-icons {
-    order: 2;
-
-    @media screen and (max-width: $tablet-width) {
-      margin-top: 15px;
-      order: 1;
+    &,
+    small {
+        font-size: $font-size-mini;
     }
-  }
 
-  &-logo {
-    background-image: url('#{ $logo-image }');
-    background-repeat: no-repeat;
-    background-size: contain;
-    display: block;
-    height: $footer-logo-height;
-    left: 0;
-    order: 0;
-    width: $footer-logo-width;
-  }
+    a {
+        color: inherit;
+
+        &:hover,
+        &:focus {
+            color: $brand-grey;
+        }
+    }
+}
+
+.footer__links {
+    margin-top: $spacer / 2;
+
+    @media screen and (min-width: $break-point--small) {
+        text-align: right;
+        margin-top: 0;
+    }
+
+    a {
+        margin: 0 $spacer / 2;
+        display: inline-block;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
 }
