@@ -1,4 +1,5 @@
 @import '../themes/oceanprotocol/variables';
+@import '../themes/oceanprotocol/placeholders';
 
 .pageHeader {
     margin: auto;
@@ -28,13 +29,6 @@
 }
 
 .bridge {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    width: 100%;
-    align-items: center;
-    position: relative;
-
     .address-label {
         color: $primary-color;
         font-size: $font-size-small;
@@ -45,25 +39,17 @@
     }
 }
 
-.bridge-statistics-container {
-    align-self: center;
-    margin-top: 60px;
-
-    @media screen and (max-height: 720px) {
-        margin-top: 30px;
-    }
-}
-
 $bridge-background-image: $base-images-path + '/themes/' + $theme-name + '/bridge/arrow-back.svg';
 $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + '/bridge/arrow-back-mobile.svg';
 
 .bridge-transfer {
+    @extend %box;
+    margin-top: $spacer * 2;
     width: 100%;
-    border-radius: .2rem;
-    border: 1px solid $brand-grey-lighter;
-    background: $brand-white url($bridge-background-image-mobile) no-repeat center center;
+    background-image: url($bridge-background-image-mobile);
+    background-repeat: no-repeat;
+    background-position: center center;
     background-size: contain;
-    padding: $spacer;
     
     @media (min-width: $break-point--small) {
         padding: $spacer * 3 $spacer $spacer * 2 $spacer;
@@ -73,12 +59,6 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
         background-image: url($bridge-background-image);
         background-position: 40% center;
         background-size: unset;
-    }
-
-    .bridge-network-data {
-        align-items: center;
-        cursor: pointer;
-        display: flex;
     }
 
     .form-container {
@@ -92,11 +72,6 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
         }
     }
 
-    .network-basic-label {
-        color: $bridge-label-color;
-        font-size: $font-size-small;
-    }
-
     .network-title {
         font-size: $font-size-h2;
         margin: 0;
@@ -108,19 +83,6 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
         margin-left: $spacer / 4;
     }
 
-    .network-id {
-        color: $bridge-label-color;
-    }
-
-    .network-id-container {
-        background-color: $bridge-link-color;
-        border-radius: 3px;
-        height: 26px;
-        margin-left: 10px;
-        text-align: center;
-        width: 32px;
-    }
-
     .network-balance {
         color: $bridge-balance-color;
         font-weight: $font-weight-bold;
@@ -130,14 +92,10 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
     .network-show-more {
         color: $bridge-link-color;
         font-size: $font-size-small;
-    }
-
-    .info-icon {
-        margin-right: $spacer / 4;
-
-        path {
-            fill: $brand-grey-light;
-        }
+        background: none;
+        padding: 0;
+        margin: 0;
+        cursor: pointer;
     }
 }
 
@@ -186,25 +144,21 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
         color: $bridge-input-label-color;
         font-weight: $font-weight-bold;
         font-size: $font-size-small;
-        line-height: 48px;
+        line-height: 49px;
         padding: 0 $spacer / 2;
         text-transform: uppercase;
-        background: $brand-grey-lighter;
+        background: $body-background;
+        border-left: 1px solid $brand-grey-lighter;
     }
 
     &-button {
-        background: $brand-gradient;
+        @extend %button;
         border-radius: 0 0 .2rem .2rem;
-        color: $bridge-button-text-color;
-        display: block;
-        text-transform: uppercase;
-        padding: 0 $spacer / 2;
+        padding: $spacer / 3 $spacer / 2;
         height: 48px;
-        text-decoration: none;
-        cursor: pointer;
         width: 100%;
 
-        @media screen and (min-width: $break-point--small) {
+        @media (min-width: $break-point--small) {
             border-radius: 0 .2rem .2rem 0;
         }
 
@@ -271,147 +225,95 @@ $bridge-background-image-mobile: $base-images-path + '/themes/' + $theme-name + 
 }
 
 .noWallet-alert {
-    .noWallet-buttons {
-        padding-top: $spacer / 2;
-        column-gap: 10px;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        row-gap: 10px;
-
-        @media screen and (max-width: $mobile-width) {
-            grid-template-columns: 1fr;
-        }
-
-        a,
-        button { 
-            border-radius: .2rem;
-            padding: $spacer / 4;
-            text-align: center;
-            text-decoration: none;
-            text-transform: uppercase;
-            font-weight: $font-weight-bold;
-            background-color: $brand-grey-light;
-            color: $button-text-color;
-        }
-
-        .noWallet-cancel {
-            background-color: $button-bordered-background-color;
-            border: 1px solid $button-bordered-border-color;
-            color: $button-bordered-text-color;
-            cursor: pointer;
-
-            &:hover {
-                opacity: 0.7;
-            }
-        }
+    ul {
+        margin-bottom: 0;
     }
-}
-
-.disclaimer-alert {
-    .disclaimer-tos {
-        color: $modal-text-color;
-        padding-left: 5px;
-    }
-    .disclaimer-link {
-        color: $modal-link-color;
-    }
-
-    .disclaimer-buttons {
-        padding-top: $spacer / 2;
-
-        .disclaimer-confirm {
-            font-size: $font-size-small;
-            background: $brand-gradient;
-            border-radius: .2rem;
-            color: $button-text-color;
-            text-transform: uppercase;
-            padding: $spacer / 3 $spacer;
-            cursor: pointer;
-        }
-
-        .disclaimer-confirm-disabled {
-            background: $brand-gradient;
-            border-radius: .2rem;
-            color: $button-text-color;
-            text-transform: uppercase;
-            padding: $spacer / 3;
-            opacity: .5;
-        }
-    }
-}
-
-.transfer-alert {
-    .transfer-title {
-        align-items: center;
-        color: $bridge-transfer-title-color;
-        display: flex;
-        font-size: $font-size-base;
-        justify-content: space-between;
-        padding-bottom: $spacer * 2;
-
-        path {
-            fill: $primary-color;
-        }
-
-        .alert-logo-box {
-            align-items: center;
-            background-color: $alert-logo-box-background-color;
-            border-radius: .2rem;
-            display: flex;
-            width: 85px;
-            height: 80px;
-            justify-content: center;
-            margin-left: $spacer / 2;
-            margin-right: $spacer / 2;
-            position: relative;
-        }
-    }
-
-    .transfer-network {
-        position: absolute;
-        top: 110%;
-        left: 0;
-        width: 160%;
-        font-size: $font-size-small;
-        color: $brand-grey-light;
+    
+    li {
         font-weight: $font-weight-bold;
     }
+}
 
-    .transfer-description {
-        color: $modal-text-color;
+.noWallet-cancel {
+    @extend %buttonTextOnly;
+    display: block;
+    margin: auto;
+}
+
+.disclaimer-tos {
+    color: $modal-text-color;
+    padding-left: 5px;
+}
+
+.disclaimer-link {
+    color: $modal-link-color;
+}
+
+.disclaimer-buttons {
+    padding-top: $spacer / 2;
+    text-align: center;
+}
+
+.disclaimer-confirm {
+    @extend %button;
+}
+
+.disclaimer-confirm-disabled {
+    @extend %button;
+    opacity: .5;
+}
+
+.transfer-title {
+    align-items: center;
+    color: $bridge-transfer-title-color;
+    display: flex;
+    font-size: $font-size-base;
+    justify-content: space-between;
+    padding-bottom: $spacer * 2;
+
+    path {
+        fill: $primary-color;
     }
+
+    .alert-logo-box {
+        align-items: center;
+        background-color: $alert-logo-box-background-color;
+        border-radius: .2rem;
+        display: flex;
+        width: 85px;
+        height: 80px;
+        justify-content: center;
+        margin-left: $spacer / 2;
+        margin-right: $spacer / 2;
+        position: relative;
+    }
+}
+
+.transfer-network {
+    position: absolute;
+    top: 110%;
+    left: 0;
+    width: 160%;
+    font-size: $font-size-small;
+    color: $brand-grey-light;
+    font-weight: $font-weight-bold;
+}
+
+.transfer-description {
+    color: $modal-text-color;
 }
 
 .transfer-buttons {
     display: flex;
-    justify-content: space-between;
-    padding: $spacer / 2 0 0;
-}
-
-.transfer-confirm,
-.transfer-cancel {
-    border-radius: .2rem;
-    text-transform: uppercase;
-    flex-grow: 1;
-    padding: $spacer / 3;
-    max-width: 49%;
-    font-size: $font-size-small;
-    cursor: pointer;
-
-    &:hover {
-        opacity: 0.9;
-    }
+    justify-content: center;
+    padding: $spacer 0 0;
 }
 
 .transfer-confirm {
-    background: $brand-gradient;
-    color: $button-text-color;
+    @extend %button;
+    margin-right: $spacer;
 }
 
 .transfer-cancel {
-    background-color: $button-bordered-background-color;
-    border: 1px solid $button-bordered-border-color;
-    color: $button-bordered-text-color;
-
-    
+    @extend %buttonTextOnly;
 }

@@ -36,16 +36,7 @@
 }
 
 .swal-button {
-    background: $brand-gradient;
-    border-radius: .2rem;
-    color: $button-text-color;
-    text-transform: uppercase;
-    height: 40px;
-    text-decoration: none;
-
-    &:focus {
-        outline: 0;
-    }
+    @extend %button;
 }
 
 .swal-icon {

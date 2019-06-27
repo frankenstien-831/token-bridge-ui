@@ -16,9 +16,7 @@ export const BridgeNetwork = ({
     : numeral(balance).format('0,0.00', Math.floor)
 
   const showMore = () => (
-    <div className="bridge-network-data" onClick={showModal}>
-        <span className="network-show-more">Network Info</span>
-    </div>
+    <button className="network-show-more" onClick={showModal}>Network Info</button>
   )
 
   return (

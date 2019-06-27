@@ -1,3 +1,5 @@
+@import './oceanprotocol/variables';
+@import './oceanprotocol/placeholders';
 @import './oceanprotocol/global.scss';
 
 $theme-name: 'oceanprotocol';
@@ -20,7 +22,6 @@ $gradient-color-2: $secondary-color-dark;
 
 // main
 $main-background-color: $body-background;
-$main-font-family: 'Sharp Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
 
 // header
 $header-background-color: $primary-color;
@@ -29,7 +30,7 @@ $header-logo-height: 60px;
 
 // header menu
 $header-menu-icon-color: $secondary-color;
-$header-menu-text-color: #fff;
+$header-menu-text-color: $brand-white;
 
 // daily quota
 $daily-quota-background: $brand-grey;
@@ -43,13 +44,6 @@ $footer-text-color: #fff;
 
 // separator
 $separator-color: #e4e4e4;
-
-// background
-$pattern-background-image: $base-images-path + '/themes/' + $theme-name + '/background/bg-pattern.svg';
-
-// social icons
-$social-icons-background-color: #fff;
-$social-icons-icon-color: $primary-color;
 
 // logo
 $logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo.svg';
@@ -65,23 +59,6 @@ $foreign-logo-image: $base-images-path + '/themes/' + $theme-name + '/logos/logo
 $foreign-logo-image-modal: $base-images-path + '/themes/' + $theme-name + '/logos/logo-foreign-modal.svg';
 $foreign-logo-width: 60px;
 $foreign-logo-height: 60px;
-
-// buttons
-$button-background-color: $secondary-color;
-$button-text-color: #fff;
-
-$button-background-color-2: $tertiary-color;
-$button-text-color-2: #fff;
-
-$button-background-color-3: $secondary-color-dark;
-$button-text-color-3: #fff;
-
-$button-background-color-4: $primary-color;
-$button-text-color-4: #fff;
-
-$button-bordered-background-color: #fff;
-$button-bordered-text-color: $primary-color;
-$button-bordered-border-color: $primary-color;
 
 // modals
 $modal-background-color: $brand-white;
@@ -100,20 +77,12 @@ $loading-item-text-color: $brand-white;
 $loading-logo: $base-images-path + '/themes/' + $theme-name + '/logos/logo-loading.svg';
 
 // bridge section
-$bridge-gradient-start: $gradient-color-1;
-$bridge-gradient-end: $gradient-color-2;
-$bridge-logo-background-color: $primary-color;
 $bridge-link-color: $secondary-color;
 $bridge-balance-color: $brand-black;
-$bridge-button-background-color: $button-background-color;
-$bridge-button-text-color: $button-text-color;
-$bridge-textfield-background: $brand-white;
-$bridge-input-label-color: $text-color;
+$bridge-input-label-color: $brand-grey-light;
 $bridge-label-color: $text-color;
 $bridge-textfield-color: $text-color;
 $bridge-textfield-placeholder-color: $brand-grey-light;
-$bridge-side-image-width: 272px;
-$bridge-side-image-height: 276px;
 $bridge-transfer-title-color: $primary-color;
 
 // bridge alert
@@ -121,11 +90,6 @@ $alert-logo-box-background-color: $primary-color;
 
 // copy icon
 $copy-icon-color: $brand-grey-light;
-
-// status section
-$status-text-color: $text-color;
-$status-authority-number-color: $primary-color;
-$status-authority-address-color: $text-color;
 
 // datablock
 $datablock-value-color: $primary-color;
@@ -143,5 +107,3 @@ $events-column-title-color: $text-color;
 $events-recipient-label-color: $text-color;
 $events-value-color: $text-color;
 $events-block-color: $text-color;
-
-@import './oceanprotocol/swal.scss';

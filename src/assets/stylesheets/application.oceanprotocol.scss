@@ -1,3 +1,8 @@
-@import "helpers/variables";
-@import "themes/oceanprotocol";
-@import "base-imports";
+@import 'helpers/variables';
+
+@import 'themes/oceanprotocol/variables';
+@import '../../../node_modules/@oceanprotocol/typographies/sass/ocean-typo.scss';
+
+@import 'themes/oceanprotocol';
+@import 'themes/oceanprotocol/swal.scss';
+@import 'base-imports';

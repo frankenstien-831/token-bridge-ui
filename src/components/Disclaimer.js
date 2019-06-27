@@ -4,9 +4,9 @@ export const Disclaimer = ({ onConfirmation }) => (
     <div className="disclaimer-alert">
         <h1 className="title">Ocean Protocol Token Bridge</h1>
         <div className="description">
-        <p>Use of this app and the TokenBridge is at your own risk. Users may experience
+        <p>Use of this app is at your own risk. You may experience
         unexpected delays, unexpected visual artifacts, unexpected loss of tokens or funds from improper app configuration, or other negative outcomes.</p>
-        <p><strong>By hitting the "continue" button, you are representing that you’ve read our 
+        <p><strong>By hitting the <em>Continue</em> button, you are representing that you’ve read our {' '}
         <a
             href="https://forum.poa.network/t/end-user-licensing-agreement-and-terms-of-service/2197"
             target="_blank" rel="noopener noreferrer">Terms of

@@ -46,7 +46,7 @@ export const TransferAlert = ({
           </p>
         </div>
         <div className="transfer-buttons">
-          <button className="transfer-confirm" onClick={onConfirmation}>Continue</button>
+          <button className="transfer-confirm" onClick={onConfirmation}>Confirm</button>
           <button className="transfer-cancel" onClick={onCancel}>Cancel</button>
         </div>
       </div>

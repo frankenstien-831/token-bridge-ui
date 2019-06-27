@@ -1,0 +1,53 @@
+%box {
+    background-color: $brand-white;
+    border: 1px solid $brand-grey-lighter;
+    border-radius: .2rem;
+    padding: $spacer;
+}
+
+%button {
+    background: $brand-gradient;
+    color: $brand-white;
+    border-radius: .2rem;
+    border: none;
+    text-transform: uppercase;
+    padding: $spacer / 3 $spacer;
+    font-size: $font-size-small;
+    font-family: $font-family-base;
+    font-weight: $font-weight-bold;
+    cursor: pointer;
+    transition: opacity .2s ease-out;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+
+    &:hover,
+    &:focus {
+        opacity: 0.8;
+        transform: none;
+    }
+}
+
+%buttonSecondary {
+    @extend %button;
+    background: $brand-grey-light;
+}
+
+%buttonTextOnly {
+    @extend %button;
+    padding: 0;
+    background: none;
+    border: none;
+    color: $brand-pink;
+}
+
+%grid__stats {
+    display: grid;
+    grid-gap: $spacer / 2;
+    grid-template-columns: 1fr 1fr;
+
+    @media screen and (min-width: $break-point--medium) {
+        display: flex;
+        justify-content: space-evenly;
+    }
+}
