@@ -329,3 +329,14 @@ pre {
     background: $brand-grey-light;
     color: #fff;
 }
+
+// for sticky footer
+#root {
+    display: flex;
+    min-height: calc(100vh - #{$page-frame * 2});
+    flex-direction: column;
+}
+
+.app-container {
+    flex: 1;
+}
