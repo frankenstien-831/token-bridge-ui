@@ -1,7 +1,7 @@
 {
   "name": "token-bridge-ui",
   "description": "Transfer OCEAN Tokens between Ethereum's Main network, and Ocean's Pacific network.",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "private": true,
   "homepage": "https://oceanprotocol.com/",
   "scripts": {
