@@ -15,8 +15,7 @@ WORKDIR /bridge
 
 RUN npm install -g npm serve && \
     npm install && npm run postinstall && \
-    rm -rf /bridge/node_modules/websocket/.git && \
-    npm run build
+    rm -rf /bridge/node_modules/websocket/.git
 
 # Default ENV values
 ENV LISTEN_ADDRESS='0.0.0.0'
