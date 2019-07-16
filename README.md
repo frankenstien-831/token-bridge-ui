@@ -87,7 +87,16 @@ For the GitHub releases steps a GitHub personal access token, exported as `GITHU
 
 ## Deployment
 
-_Pending..._
+After a new release, manual deployment via Docker and Kubernetes needs to be done. Build and push the Docker image for that:
+
+```bash
+# build Docker image locally
+docker build -t oceanprotocol/token-bridge-ui:3.0.2_ocean .
+# push image to Docker Hub
+docker push oceanprotocol/token-bridge-ui:3.0.2_ocean
+# finally, update image tag in respective deployment in Kubernetes
+kubectl edit deployment ...
+```
 
 ## Original Readme
 
